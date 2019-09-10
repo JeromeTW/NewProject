@@ -1,0 +1,12 @@
+Testing Resource:
+https:
+	mp3:
+		https://ccrma.stanford.edu/~jos/mp3/gtr-nylon22.mp3
+
+	mp4:
+	https://ia802302.us.archive.org/27/items/Pbtestfilemp4videotestmp4/video_test_512kb.mp4
+
+
+http:
+	mp4:
+		http://techslides.com/demos/sample-videos/small.mp4
