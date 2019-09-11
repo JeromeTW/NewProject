@@ -33,5 +33,3 @@
 1. TestTarget
 1. fastlane (optional)
 
-新開專案 Copy NewProject 專案，再 Rename
-https://appmakers.dev/how-to-rename-xcode-project/
