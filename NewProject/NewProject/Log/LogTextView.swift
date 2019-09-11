@@ -6,6 +6,7 @@
 //  Copyright © 2019 JEROME. All rights reserved.
 //
 
+/// NOTE: Work with CGFloatExtension.swift file.
 import UIKit
 
 class LogTextView: UITextView {

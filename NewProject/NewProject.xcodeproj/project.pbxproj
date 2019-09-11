@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B5FC4232883DA000B192B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5FC2232883DA000B192B /* Observable.swift */; };
+		021B5FC5232883DA000B192B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5FC3232883DA000B192B /* BaseViewController.swift */; };
+		021B5FC823288410000B192B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5FC723288410000B192B /* NSObjectExtension.swift */; };
 		026447452327CF6200822485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026447442327CF6200822485 /* AppDelegate.swift */; };
 		026447472327CF6200822485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026447462327CF6200822485 /* ViewController.swift */; };
 		0264474A2327CF6200822485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026447482327CF6200822485 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021B5FC2232883DA000B192B /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		021B5FC3232883DA000B192B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		021B5FC723288410000B192B /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		026447412327CF6200822485 /* NewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026447442327CF6200822485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026447462327CF6200822485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021B5FC1232883C8000B192B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				021B5FC3232883DA000B192B /* BaseViewController.swift */,
+				021B5FC2232883DA000B192B /* Observable.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		021B5FC6232883E8000B192B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				021B5FC723288410000B192B /* NSObjectExtension.swift */,
+				026447692327D5B200822485 /* CGFloatExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		026447382327CF6200822485 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +99,8 @@
 		026447432327CF6200822485 /* NewProject */ = {
 			isa = PBXGroup;
 			children = (
+				021B5FC6232883E8000B192B /* Utils */,
+				021B5FC1232883C8000B192B /* Base */,
 				0264475C2327D27800822485 /* Log */,
 				0264475B2327D0EB00822485 /* Network */,
 				026447582327D06500822485 /* Support */,
@@ -111,7 +137,6 @@
 				0264475D2327D27800822485 /* PrintLog.swift */,
 				0264475E2327D27800822485 /* LogTextView.swift */,
 				0264475F2327D27800822485 /* LogLevelConfigurator.swift */,
-				026447692327D5B200822485 /* CGFloatExtension.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -290,10 +315,13 @@
 			files = (
 				026447472327CF6200822485 /* ViewController.swift in Sources */,
 				0264476A2327D5B200822485 /* CGFloatExtension.swift in Sources */,
+				021B5FC5232883DA000B192B /* BaseViewController.swift in Sources */,
 				026447672327D30D00822485 /* APIRequest.swift in Sources */,
 				026447622327D27800822485 /* LogLevelConfigurator.swift in Sources */,
 				026447682327D30D00822485 /* AsynchronousOperation.swift in Sources */,
 				026447662327D30D00822485 /* NetworkRequestOperation.swift in Sources */,
+				021B5FC823288410000B192B /* NSObjectExtension.swift in Sources */,
+				021B5FC4232883DA000B192B /* Observable.swift in Sources */,
 				026447602327D27800822485 /* PrintLog.swift in Sources */,
 				026447612327D27800822485 /* LogTextView.swift in Sources */,
 				026447452327CF6200822485 /* AppDelegate.swift in Sources */,
