@@ -40,8 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    categoryListVC.viewContext = viewContext
 //    let categoryListViewControllerInfo = ViewControllerInfo(hasNavigation: true, viewController: categoryListVC, tabBarItem: UITabBarItem(title: "List", image: nil, selectedImage: nil))
 //    tabBarController.setupViewControllers([categoryListViewControllerInfo])
-//    window.rootViewController = tabBarController
-//    window.makeKeyAndVisible()
+    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+    let vc = ViewController.instantiate(storyboard: storyboard)
+    window.rootViewController = vc
+    window.makeKeyAndVisible()
   }
   
   func applicationWillTerminate(_: UIApplication) {
