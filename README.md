@@ -14,6 +14,8 @@
 1. pod init
 1.  * pod 'R.swift'
     * pod 'SwiftLint'
+    * pod 'DeviceGuru'
+    * pod 'ReachabilitySwift'
 1. Add swiftlint.yml
 1. Add Build Phases **Before Compile Sources**
     
@@ -26,10 +28,14 @@
     * "${PODS_ROOT}/SwiftLint/swiftlint"   
 1. Add Log files
 1. Add Network files
+1. Core Data files
+1. Utils files
+1. TestTarget
+    * TestsTarget -> Build Settings -> Other Swift Flag 要加 “-DTEST”
+1. 使用 Storyboarded 要記得在 .storyboard 設定 Storyboard ID
+1. swiftformat
 
 ##### TODO
 1. Firebase Crashly
-1. swiftformat
-1. TestTarget
 1. fastlane (optional)
 
