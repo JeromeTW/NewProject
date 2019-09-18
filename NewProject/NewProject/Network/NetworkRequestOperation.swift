@@ -36,6 +36,7 @@ class NetworkRequestOperation: AsynchronousOperation {
     task = session.dataTask(with: urlRequest) { (data, response, error) in
     if let error = error {
       completionHandler(.failure(.unknown(error: error)))
+      return
     }
   
     guard let httpResponse = response as? HTTPURLResponse else {
@@ -47,13 +48,13 @@ class NetworkRequestOperation: AsynchronousOperation {
   }
   
   override func cancel() {
-    print("task.cancel()\n")
+    logger.log("task.cancel()\n")
     task.cancel()
     super.cancel()
   }
   
   override func main() {
-    print("task.resume()\n")
+    logger.log("task.resume()\n")
     task!.resume()
     startDate = Date()
   }

@@ -6,5 +6,7 @@ target 'NewProject' do
   use_frameworks!
   pod 'R.swift'
   pod 'SwiftLint'
+  pod 'DeviceGuru'
+  pod 'ReachabilitySwift'
 
 end

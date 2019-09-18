@@ -1,24 +1,32 @@
 PODS:
+  - DeviceGuru (5.1.4)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - ReachabilitySwift (4.3.1)
   - SwiftLint (0.34.0)
 
 DEPENDENCIES:
+  - DeviceGuru
   - R.swift
+  - ReachabilitySwift
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DeviceGuru
     - R.swift
     - R.swift.Library
+    - ReachabilitySwift
     - SwiftLint
 
 SPEC CHECKSUMS:
+  DeviceGuru: 76fbfd16d5241bc292730cd38190d52a3b8820fc
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: b57c3c10ad2f1fa9957f2f91a9e8c5f89fd057fd
+PODFILE CHECKSUM: 68e89e58c72654f038468e8a66f4bff55c50538a
 
 COCOAPODS: 1.7.5

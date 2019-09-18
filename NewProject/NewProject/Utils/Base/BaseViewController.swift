@@ -11,17 +11,17 @@ import UIKit
 class BaseViewController: UIViewController {
     // MARK: - ViewController lifecycle
     deinit {
-        printLog("\(self.className) deinit")
+        logger.log("\(self.className) deinit")
     }
     
     override func loadView() {
         super.loadView()
-        printLog("\(self.className) loadView")
+        logger.log("\(self.className) loadView")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        printLog("\(self.className) viewDidLoad")
+        logger.log("\(self.className) viewDidLoad")
         
         setupAuth()
         setupBaseUI()
@@ -32,32 +32,32 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        printLog("\(self.className) viewWillAppear:")
+        logger.log("\(self.className) viewWillAppear:")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        printLog("\(self.className) viewDidAppear:")
+        logger.log("\(self.className) viewDidAppear:")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        printLog("\(self.className) viewWillLayoutSubviews")
+        logger.log("\(self.className) viewWillLayoutSubviews")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        printLog("\(self.className) viewDidLayoutSubviews")
+        logger.log("\(self.className) viewDidLayoutSubviews")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        printLog("\(self.className) viewWillDisappear:")
+        logger.log("\(self.className) viewWillDisappear:")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        printLog("\(self.className) viewDidDisappear:")
+        logger.log("\(self.className) viewDidDisappear:")
     }
     
     // MARK: - Inherit method
@@ -67,25 +67,25 @@ class BaseViewController: UIViewController {
     
     // MARK: - Public method
     func setupAuth() {
-        printLog("\(self.className) setupAuth")
+        logger.log("\(self.className) setupAuth")
     }
     
     func setupBaseUI() {
-        printLog("\(self.className) setupUI")
+        logger.log("\(self.className) setupUI")
         
         view.backgroundColor = .white
         title = self.className
     }
     
     func setupBinding() {
-        printLog("\(self.className) setupBinding")
+        logger.log("\(self.className) setupBinding")
     }
     
     func setupData() {
-        printLog("\(self.className) setupData")
+        logger.log("\(self.className) setupData")
     }
     
     func updateUI() {
-        printLog("\(self.className) updateUI")
+        logger.log("\(self.className) updateUI")
     }
 }
