@@ -6,21 +6,21 @@
 //  Copyright © 2019 jerome. All rights reserved.
 //
 
-import UIKit
 import DeviceGuru
+import UIKit
 
 class AdvancedLogger: BaseLogger {
   override func show(_ logString: String) {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
     let logTextView = appDelegate.logTextView
-    
+
     if logTextView.contentSize.height < logTextView.frame.size.height {
       logTextView.text += "\n\(logString)"
     } else {
       logTextView.text = logString
     }
   }
-  
+
   override func cache(_ logString: String) {
     do {
       try FileManager.default.saveLog(logString)
@@ -34,12 +34,12 @@ extension FileManager {
   var cachesDirectory: URL? {
     return urls(for: .cachesDirectory, in: .userDomainMask).first
   }
-  
+
   func saveLog(_ logString: String) throws {
     guard let cachesDirectory = cachesDirectory else { return }
     let currentDateString = Date().toString(dateFormat: "yyyyMMdd")
     let filePath = cachesDirectory.appendingPathComponent("\(currentDateString).log")
-    
+
     if fileExists(atPath: filePath.path) { // adding content to file
       let fileHandle = FileHandle(forWritingAtPath: filePath.path)
       let content = "\(logString)\n"
@@ -71,7 +71,7 @@ extension UserDefaults {
     let infoDictionary = Bundle.main.infoDictionary!
     return infoDictionary["CFBundleShortVersionString"] as! String
   }
-  
+
   func setAPPVersionAndHistory() {
     let historyKey = "APPVersionsHistory"
     if var versionHistory = self.string(forKey: historyKey) {
@@ -85,7 +85,7 @@ extension UserDefaults {
     }
     setAPPVersion()
   }
-  
+
   var APPVersionsHistory: String {
     let key = "APPVersionsHistory"
     guard let result = string(forKey: key) else {
@@ -94,12 +94,12 @@ extension UserDefaults {
     }
     return result
   }
-  
+
   private func setAPPVersion() {
     let key = "APPVersion"
     set(version, forKey: key)
   }
-  
+
   var lastVersion: String? {
     let key = "APPVersion"
     return string(forKey: key)

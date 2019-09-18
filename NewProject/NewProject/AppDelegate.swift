@@ -6,20 +6,19 @@
 //  Copyright © 2019 jerome. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
   var window: UIWindow?
   lazy var logTextView: LogTextView = {
     let logTextView = LogTextView(frame: .zero)
     logTextView.layer.zPosition = .greatestFiniteMagnitude
     return logTextView
   }()
-  
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
     logger.log("NSHomeDirectory:\(NSHomeDirectory())", level: .debug)
@@ -28,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     setupCoreDataDB()
     return true
   }
-  
+
   // MARK: - Private method
+
   private func setupWindow() {
     window = UIWindow(frame: UIScreen.main.bounds)
     guard let window = window else { fatalError() }
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window.rootViewController = vc
     window.makeKeyAndVisible()
   }
-  
+
   func applicationWillTerminate(_: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
@@ -55,8 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       logger.log("Error:\(error.localizedDescription)", level: .error)
     }
   }
-  
+
   // MARK: - Core Data stack
+
   lazy var persistentContainer: NSPersistentContainer = {
     /*
      The persistent container for the application. This implementation
@@ -69,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if let error = error as NSError? {
         // Replace this implementation with code to handle the error appropriately.
         // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        
+
         /*
          Typical reasons for an error here include:
          * The parent directory does not exist, cannot be created, or disallows writing.
@@ -83,42 +84,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     })
     return container
   }()
-  
+
   lazy var viewContext: NSManagedObjectContext = {
     persistentContainer.viewContext
   }()
-  
-  private func setupCoreDataDB() {
-  }
+
+  private func setupCoreDataDB() {}
 }
 
 // MARK: - Log
+
 extension AppDelegate {
   private func setupLogConfigure() {
     logger.configure([.error, .warning, .debug, .info], shouldShow: false, shouldCache: true)
   }
-  
+
   private func setupLogTextView() {
     #if DEBUG
-    guard let window = window else { return }
-    guard logger.shouldShow else { return }
-    
-    if #available(iOS 11.0, *) {
-      window.addSubview(logTextView, constraints: [
-        UIView.anchorConstraintEqual(from: \UIView.topAnchor, to: \UIView.safeAreaLayoutGuide.topAnchor, constant: .defaultMargin),
-        UIView.anchorConstraintEqual(from: \UIView.leadingAnchor, to: \UIView.safeAreaLayoutGuide.leadingAnchor, constant: .defaultMargin),
-        UIView.anchorConstraintEqual(from: \UIView.bottomAnchor, to: \UIView.safeAreaLayoutGuide.bottomAnchor, constant: CGFloat.defaultMargin.negativeValue),
-        UIView.anchorConstraintEqual(from: \UIView.trailingAnchor, to: \UIView.safeAreaLayoutGuide.trailingAnchor, constant: CGFloat.defaultMargin.negativeValue)
+      guard let window = window else { return }
+      guard logger.shouldShow else { return }
+
+      if #available(iOS 11.0, *) {
+        window.addSubview(logTextView, constraints: [
+          UIView.anchorConstraintEqual(from: \UIView.topAnchor, to: \UIView.safeAreaLayoutGuide.topAnchor, constant: .defaultMargin),
+          UIView.anchorConstraintEqual(from: \UIView.leadingAnchor, to: \UIView.safeAreaLayoutGuide.leadingAnchor, constant: .defaultMargin),
+          UIView.anchorConstraintEqual(from: \UIView.bottomAnchor, to: \UIView.safeAreaLayoutGuide.bottomAnchor, constant: CGFloat.defaultMargin.negativeValue),
+          UIView.anchorConstraintEqual(from: \UIView.trailingAnchor, to: \UIView.safeAreaLayoutGuide.trailingAnchor, constant: CGFloat.defaultMargin.negativeValue),
         ])
-    } else {
-      window.addSubview(logTextView, constraints: [
-        UIView.anchorConstraintEqual(with: \UIView.topAnchor, constant: .defaultMargin),
-        UIView.anchorConstraintEqual(with: \UIView.leadingAnchor, constant: .defaultMargin),
-        UIView.anchorConstraintEqual(with: \UIView.bottomAnchor, constant: CGFloat.defaultMargin.negativeValue),
-        UIView.anchorConstraintEqual(with: \UIView.trailingAnchor, constant: CGFloat.defaultMargin.negativeValue)
+      } else {
+        window.addSubview(logTextView, constraints: [
+          UIView.anchorConstraintEqual(with: \UIView.topAnchor, constant: .defaultMargin),
+          UIView.anchorConstraintEqual(with: \UIView.leadingAnchor, constant: .defaultMargin),
+          UIView.anchorConstraintEqual(with: \UIView.bottomAnchor, constant: CGFloat.defaultMargin.negativeValue),
+          UIView.anchorConstraintEqual(with: \UIView.trailingAnchor, constant: CGFloat.defaultMargin.negativeValue),
         ])
-    }
+      }
     #endif
   }
 }
-

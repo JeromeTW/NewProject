@@ -31,7 +31,7 @@ extension CGFloat {
   var negativeValue: CGFloat {
     return (-1.0 * self)
   }
-  
+
   static var navagationViewHeight: CGFloat {
     if UIApplication.shared.statusBarOrientation.isPortrait {
       return 44

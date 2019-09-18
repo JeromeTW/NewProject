@@ -20,7 +20,7 @@ class ImageLoader {
     queue.qualityOfService = QualityOfService.userInitiated
     return queue
   }()
-  
+
   func imageByURL(_ url: URL, completionHandler: @escaping (_ image: UIImage?, _ url: URL) -> Void) {
     // get image from cache
     if let imageFromCache = imageCache.object(forKey: url.absoluteString as NSString) {
@@ -73,9 +73,9 @@ class ImageLoader {
           }
           return
         }
-        
+
         switch result {
-        case .success(let response):
+        case let .success(response):
           if let data = response.body {
             if let image = UIImage(data: data) {
               self.imageCache.setObject(image, forKey: url.absoluteString as NSString)
@@ -88,7 +88,7 @@ class ImageLoader {
             logger.log("No Data")
             mainThreadCompletionHandler(image: nil, url)
           }
-          
+
         case .failure:
           logger.log("failed")
           mainThreadCompletionHandler(image: nil, url)
@@ -98,13 +98,13 @@ class ImageLoader {
       queue.addOperation(operation)
     }
   }
-  
+
   func cancelRequest(url: URL) {
     // TODO: cell 不在畫面上時呼叫此函式。
     if let operation = requestOperationDictionary[url] {
-      self.requestOperationDictionary.removeValue(forKey: url)
+      requestOperationDictionary.removeValue(forKey: url)
       operation.cancel()
       operation.completeOperation()
     }
-  }  
+  }
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2019 jerome. All rights reserved.
 //
 
+import DeviceGuru
 import Foundation
-import  DeviceGuru
 
 extension DeviceGuru {
   var hasSensorHousing: Bool {

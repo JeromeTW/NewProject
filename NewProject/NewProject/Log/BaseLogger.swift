@@ -32,47 +32,48 @@ enum LogLevel: Int, CustomStringConvertible {
 #endif
 
 class BaseLogger {
-  
   // MARK: - Properties
+
   private(set) var logLevels = [LogLevel]()
   private(set) var shouldShow = false
   private(set) var shouldCache = false
-  
-  init() { }
+
+  init() {}
 
   // MARK: - Public method
+
   func configure(_ logLevels: [LogLevel], shouldShow: Bool = false, shouldCache: Bool = false) {
     self.logLevels = logLevels
     self.shouldShow = shouldShow
     self.shouldCache = shouldCache
   }
-  
+
   func log(_ items: Any,
-                level: LogLevel = .info,
-                file: String = #file,
-                function: String = #function,
-                line: Int = #line) {
+           level: LogLevel = .info,
+           file: String = #file,
+           function: String = #function,
+           line: Int = #line) {
     #if DEBUG
-    if logLevels.contains(level) {
-      let currentDateString = Date().toString()
-      let fileName = file.components(separatedBy: "/").last?.components(separatedBy: ".").first ?? ""
-      let logString = "⭐️ [\(currentDateString)][\(level.description)] [\(fileName).\(function):\(line)] > \(items)"
-      
-      print(logString)
-      
-      if shouldShow {
-        show(logString)
+      if logLevels.contains(level) {
+        let currentDateString = Date().toString()
+        let fileName = file.components(separatedBy: "/").last?.components(separatedBy: ".").first ?? ""
+        let logString = "⭐️ [\(currentDateString)][\(level.description)] [\(fileName).\(function):\(line)] > \(items)"
+
+        print(logString)
+
+        if shouldShow {
+          show(logString)
+        }
+
+        if shouldCache {
+          cache(logString)
+        }
       }
-      
-      if shouldCache {
-        cache(logString)
-      }
-    }
     #endif
   }
-  
-  func show(_ logString: String) { } // 在 AdvancedLogger 中實作
-  func cache(_ logString: String) { } // 在 AdvancedLogger 中實作
+
+  func show(_: String) {} // 在 AdvancedLogger 中實作
+  func cache(_: String) {} // 在 AdvancedLogger 中實作
 }
 
 extension Date {
