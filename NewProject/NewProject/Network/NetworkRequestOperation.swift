@@ -1,10 +1,6 @@
-//
-//  NetworkRequestOperation.swift
-//  GP920_iOS
-//
-//  Created by Howard on 2016/8/15.
-//  Copyright © 2016年 Daniel. All rights reserved.
-//
+// NetworkRequestOperation.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh on 2019/9/18.
 
 import Foundation
 

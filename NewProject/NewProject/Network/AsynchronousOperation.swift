@@ -1,10 +1,6 @@
-//
-//  AsynchronousOperation.swift
-//  TaiChungWeather
-//
-//  Created by JEROME on 2019/9/5.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// AsynchronousOperation.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh on 2019/9/18.
 
 import Foundation
 

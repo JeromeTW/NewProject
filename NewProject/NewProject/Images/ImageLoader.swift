@@ -1,10 +1,6 @@
-//
-//  ImageLoader.swift
-//  JeromeYoutube
-//
-//  Created by JEROME on 2019/9/11.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// ImageLoader.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh on 2019/9/18.
 
 import UIKit
 

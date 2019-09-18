@@ -1,10 +1,6 @@
-//
-//  CGFloatExtension.swift
-//  TaiChungWeather
-//
-//  Created by JEROME on 2019/7/29.
-//  Copyright © 2019 JEROME. All rights reserved.
-//
+// CGFloatExtension.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh on 2019/9/18.
 
 import UIKit
 

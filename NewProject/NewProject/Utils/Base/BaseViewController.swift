@@ -1,10 +1,6 @@
-//
-//  BaseViewController.swift
-//  DDTDemo
-//
-//  Created by Allen Lai on 2019/7/29.
-//  Copyright © 2019 Allen Lai. All rights reserved.
-//
+// BaseViewController.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh on 2019/9/18.
 
 import UIKit
 

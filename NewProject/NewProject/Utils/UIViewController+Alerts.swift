@@ -1,19 +1,6 @@
-/*
- UIViewController+Alerts.swift
-
- Copyright © 2017 SoftArts Inc. All rights reserved.
-
- * Description: Show alert in UIViewController.
-
- * Creation Date: 2017/7/13
- * Author: Jerome Hsieh
- * Language: Swift 3/4
- * OS: iOS/watchOS/macOS
- * Source: n/a
- * Reference: n/a
- * Note: n/a
-
- */
+// UIViewController+Alerts.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh on 2019/9/18.
 
 import Foundation
 import UIKit
