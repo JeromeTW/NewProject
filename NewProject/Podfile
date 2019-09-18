@@ -8,5 +8,8 @@ target 'NewProject' do
   pod 'SwiftLint'
   pod 'DeviceGuru'
   pod 'ReachabilitySwift'
-
+  pod 'SwiftFormat/CLI'
+  target 'ImageLoaderTests' do
+    inherit! :search_paths
+  end
 end
