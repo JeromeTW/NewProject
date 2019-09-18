@@ -18,8 +18,7 @@ class CoreDataConnect {
   }
 
   init() { // Use viewContext
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    myContext = appDelegate.viewContext
+    myContext = UIApplication.viewContext
   }
 
   // MARK: - Functions
