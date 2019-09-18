@@ -34,6 +34,7 @@
     * TestsTarget -> Build Settings -> Other Swift Flag 要加 “-DTEST”
 1. 使用 Storyboarded 要記得在 .storyboard 設定 Storyboard ID
 1. swiftformat
+    * cd iOS Project 下，到用 “swiftformat --inferoptions . --output .swiftformat” 產生一個 .swiftformat 配置檔案（個人喜歡把 indent set 2），再下 “swiftformat .” 指令調整格式。
 
 ##### TODO
 1. Firebase Crashly
