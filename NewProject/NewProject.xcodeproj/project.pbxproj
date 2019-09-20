@@ -25,7 +25,6 @@
 		02BEA1E92331D64D00C3E317 /* DeviceGuruExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */; };
 		02BEA1EA2331D64D00C3E317 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */; };
 		02BEA1EB2331D64D00C3E317 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */; };
-		02BEA1EC2331D64D00C3E317 /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DD2331D64D00C3E317 /* UITabBarControllerExtension.swift */; };
 		02BEA1ED2331D64D00C3E317 /* JeromeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1E02331D64D00C3E317 /* JeromeNavigationBar.swift */; };
 		02BEA1EE2331D64D00C3E317 /* JeromeNavigationBarStatusBarBaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BEA1E12331D64D00C3E317 /* JeromeNavigationBarStatusBarBaseVC.xib */; };
 		02BEA1EF2331D64D00C3E317 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1E22331D64D00C3E317 /* BaseViewController.swift */; };
@@ -37,6 +36,10 @@
 		02BEA2032331DA9300C3E317 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D02331D62800C3E317 /* APIRequest.swift */; };
 		02BEA2042331DAB300C3E317 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D62331D64C00C3E317 /* BaseLogger.swift */; };
 		02BEA2052331DB1500C3E317 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CB2331D61100C3E317 /* ImageLoader.swift */; };
+		02F9971F23346DF000EE21CA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9971E23346DF000EE21CA /* MainTabBarController.swift */; };
+		02F9972323346DFE00EE21CA /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9972123346DFE00EE21CA /* VideoCoordinator.swift */; };
+		02F9972423346DFE00EE21CA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9972223346DFE00EE21CA /* Coordinator.swift */; };
+		02F9972623346EC500EE21CA /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9972523346EC500EE21CA /* CoordinatedNavigationController.swift */; };
 		9BFA9D32793D30310FAC46AD /* Pods_NewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD90FB7DF2E36860D14198 /* Pods_NewProject.framework */; };
 		FC69BF30FD3EC68447E7577A /* Pods_ImageLoaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED7BDD6E421D4B026DE0E37 /* Pods_ImageLoaderTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,7 +75,6 @@
 		02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuruExtension.swift; sourceTree = "<group>"; };
 		02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
-		02BEA1DD2331D64D00C3E317 /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
 		02BEA1E02331D64D00C3E317 /* JeromeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeromeNavigationBar.swift; sourceTree = "<group>"; };
 		02BEA1E12331D64D00C3E317 /* JeromeNavigationBarStatusBarBaseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JeromeNavigationBarStatusBarBaseVC.xib; sourceTree = "<group>"; };
 		02BEA1E22331D64D00C3E317 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,10 @@
 		02BEA1F62331DA4200C3E317 /* ImageLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BEA1F82331DA4200C3E317 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		02BEA1FA2331DA4200C3E317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F9971E23346DF000EE21CA /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		02F9972123346DFE00EE21CA /* VideoCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCoordinator.swift; sourceTree = "<group>"; };
+		02F9972223346DFE00EE21CA /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		02F9972523346EC500EE21CA /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
 		2F14C1FE295572FE53589E3C /* Pods-ImageLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLoaderTests.release.xcconfig"; path = "Target Support Files/Pods-ImageLoaderTests/Pods-ImageLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
 		78B5075BE387B8E9BA200FD1 /* Pods-NewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewProject.debug.xcconfig"; path = "Target Support Files/Pods-NewProject/Pods-NewProject.debug.xcconfig"; sourceTree = "<group>"; };
 		7ED7BDD6E421D4B026DE0E37 /* Pods_ImageLoaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLoaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,7 @@
 		026447432327CF6200822485 /* NewProject */ = {
 			isa = PBXGroup;
 			children = (
+				02F9972023346DFE00EE21CA /* Coordinator */,
 				02BEA1D42331D64C00C3E317 /* Log */,
 				02BEA1D82331D64D00C3E317 /* Utils */,
 				02BEA1CD2331D62800C3E317 /* Network */,
@@ -139,6 +146,7 @@
 				02BEA1C52331D5DE00C3E317 /* Core Data */,
 				026447582327D06500822485 /* Support */,
 				026447442327CF6200822485 /* AppDelegate.swift */,
+				02F9971E23346DF000EE21CA /* MainTabBarController.swift */,
 				026447462327CF6200822485 /* ViewController.swift */,
 				026447482327CF6200822485 /* Main.storyboard */,
 			);
@@ -200,7 +208,6 @@
 				02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */,
 				02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */,
 				02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */,
-				02BEA1DD2331D64D00C3E317 /* UITabBarControllerExtension.swift */,
 				02BEA1E42331D64D00C3E317 /* StoryboardExtension.swift */,
 			);
 			path = Utils;
@@ -232,6 +239,16 @@
 				02BEA1FA2331DA4200C3E317 /* Info.plist */,
 			);
 			path = ImageLoaderTests;
+			sourceTree = "<group>";
+		};
+		02F9972023346DFE00EE21CA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				02F9972123346DFE00EE21CA /* VideoCoordinator.swift */,
+				02F9972223346DFE00EE21CA /* Coordinator.swift */,
+				02F9972523346EC500EE21CA /* CoordinatedNavigationController.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		B89BBF03FAC17BB9C57B03BA /* Frameworks */ = {
@@ -471,7 +488,7 @@
 				02BEA1CC2331D61100C3E317 /* ImageLoader.swift in Sources */,
 				02BEA1EF2331D64D00C3E317 /* BaseViewController.swift in Sources */,
 				02BEA1E92331D64D00C3E317 /* DeviceGuruExtension.swift in Sources */,
-				02BEA1EC2331D64D00C3E317 /* UITabBarControllerExtension.swift in Sources */,
+				02F9972623346EC500EE21CA /* CoordinatedNavigationController.swift in Sources */,
 				02BEA1D22331D62800C3E317 /* AsynchronousOperation.swift in Sources */,
 				02BEA1C92331D5F700C3E317 /* NSPersistentContainerExtension.swift in Sources */,
 				02BEA1E62331D64D00C3E317 /* BaseLogger.swift in Sources */,
@@ -480,8 +497,11 @@
 				02BEA1EA2331D64D00C3E317 /* CGFloatExtension.swift in Sources */,
 				02BEA1D32331D62800C3E317 /* APIRequest.swift in Sources */,
 				026447452327CF6200822485 /* AppDelegate.swift in Sources */,
+				02F9972423346DFE00EE21CA /* Coordinator.swift in Sources */,
+				02F9971F23346DF000EE21CA /* MainTabBarController.swift in Sources */,
 				02BEA1EB2331D64D00C3E317 /* UIViewController+Alerts.swift in Sources */,
 				02BEA1F12331D64D00C3E317 /* StoryboardExtension.swift in Sources */,
+				02F9972323346DFE00EE21CA /* VideoCoordinator.swift in Sources */,
 				02BEA1E72331D64D00C3E317 /* LogTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,43 +14,103 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return logTextView
   }()
 
-  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
+    logger.log("\(self.className) willFinishLaunchingWithOptions")
     logger.log("NSHomeDirectory:\(NSHomeDirectory())", level: .debug)
     setupWindow()
     setupLogTextView()
+    return true
+  }
+  
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    logger.log("\(self.className) didFinishLaunchingWithOptions")
     setupCoreDataDB()
     return true
   }
-
-  // MARK: - Private method
-
-  private func setupWindow() {
-    window = UIWindow(frame: UIScreen.main.bounds)
-    guard let window = window else { fatalError() }
-    // TODO: Need to implentation
-//    let tabBarController = UITabBarController()
-//    let storyboard = UIStoryboard(name: "CategoryListTab", bundle: Bundle.main)
-//    let categoryListVC = CategoryListVC.instantiate(storyboard: storyboard)
-//    categoryListVC.viewContext = viewContext
-//    let categoryListViewControllerInfo = ViewControllerInfo(hasNavigation: true, viewController: categoryListVC, tabBarItem: UITabBarItem(title: "List", image: nil, selectedImage: nil))
-//    tabBarController.setupViewControllers([categoryListViewControllerInfo])
-    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-    let vc = ViewController.instantiate(storyboard: storyboard)
-    window.rootViewController = vc
-    window.makeKeyAndVisible()
+  
+  func applicationDidBecomeActive(_ application: UIApplication) {
+    logger.log("\(self.className) applicationDidBecomeActive")
   }
-
+  
+  func applicationWillResignActive(_ application: UIApplication) {
+    logger.log("\(self.className) applicationWillResignActive")
+  }
+  
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    logger.log("\(self.className) openURLoptions")
+    return true
+  }
+  
+  func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+    logger.log("\(self.className) applicationDidReceiveMemoryWarning")
+  }
+  
   func applicationWillTerminate(_: UIApplication) {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
+    logger.log("\(self.className) applicationWillTerminate")
     do {
       try persistentContainer.saveContext()
     } catch {
       logger.log("Error:\(error.localizedDescription)", level: .error)
     }
   }
+  
+  // MARK: - StatusBar
+  
+  func application(_ application: UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+    logger.log("\(self.className) willChangeStatusBarOrientation")
+  }
+  
+  func application(_ application: UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
+    logger.log("\(self.className) didChangeStatusBarOrientation")
+  }
+  
+  func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {
+    logger.log("\(self.className) willChangeStatusBarFrame")
+  }
+  
+  func application(_ application: UIApplication, didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
+    logger.log("\(self.className) didChangeStatusBarFrame")
+  }
+  
+  // MARK: - Notifications
+  
+  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    logger.log("\(self.className) didRegisterForRemoteNotificationsWithDeviceToken")
+  }
+  
+  func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    logger.log("\(self.className) didFailToRegisterForRemoteNotificationsWithError")
+  }
+  
+  func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+    logger.log("\(self.className) didReceiveRemoteNotification")
+  }
+  
+  // MARK: - Background
+  
+  func applicationDidEnterBackground(_ application: UIApplication) {
+    logger.log("\(self.className) applicationDidEnterBackground")
+  }
+  
+  func applicationWillEnterForeground(_ application: UIApplication) {
+    logger.log("\(self.className) applicationWillEnterForeground")
+  }
+  
+  func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool{
+    return true
+  }
+  
+  private func setupWindow() {
+    window = UIWindow(frame: UIScreen.main.bounds)
+    guard let window = window else { fatalError() }
+    // TODO: Need to implentation
+    window.rootViewController = MainTabBarController()
+    window.makeKeyAndVisible()
+  }
+
+  
 
   // MARK: - Core Data stack
 
