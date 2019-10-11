@@ -1,8 +1,7 @@
 // AppDelegate.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/9/18.
+// Created by Jerome Hsieh on 2019/10/6.
 
-import CoreData
 import UIKit
 
 @UIApplicationMain
@@ -14,145 +13,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return logTextView
   }()
 
-  func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+  lazy var persistentContainerManager = PersistentContainerManager.shared
+
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
-    logger.log("\(self.className) willFinishLaunchingWithOptions")
     logger.log("NSHomeDirectory:\(NSHomeDirectory())", level: .debug)
-    setupWindow()
-    setupLogTextView()
-    return true
+    persistentContainerManager.setupCoreDataDB()
+    #if TEST
+      print("🌘 TEST")
+      setupWindow(rootViewController: UIViewController())
+      return true
+    #else
+      print("🌘 NOT TEST")
+      setupWindow(rootViewController: MainTabBarController())
+      setupLogTextView()
+      return true
+    #endif
   }
-  
-  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    logger.log("\(self.className) didFinishLaunchingWithOptions")
-    setupCoreDataDB()
-    return true
+
+  // MARK: - Private method
+
+  private func setupWindow(rootViewController: UIViewController) {
+    window = UIWindow(frame: UIScreen.main.bounds)
+    guard let window = window else { fatalError() }
+    window.rootViewController = rootViewController
+    window.makeKeyAndVisible()
   }
-  
-  func applicationDidBecomeActive(_ application: UIApplication) {
-    logger.log("\(self.className) applicationDidBecomeActive")
-  }
-  
-  func applicationWillResignActive(_ application: UIApplication) {
-    logger.log("\(self.className) applicationWillResignActive")
-  }
-  
-  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    logger.log("\(self.className) openURLoptions")
-    return true
-  }
-  
-  func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
-    logger.log("\(self.className) applicationDidReceiveMemoryWarning")
-  }
-  
+
   func applicationWillTerminate(_: UIApplication) {
-    logger.log("\(self.className) applicationWillTerminate")
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    // Saves changes in the application's managed object context before the application terminates.
     do {
-      try persistentContainer.saveContext()
+      try persistentContainerManager.persistentContainer.saveContext()
     } catch {
       logger.log("Error:\(error.localizedDescription)", level: .error)
     }
   }
-  
-  // MARK: - StatusBar
-  
-  func application(_ application: UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-    logger.log("\(self.className) willChangeStatusBarOrientation")
-  }
-  
-  func application(_ application: UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
-    logger.log("\(self.className) didChangeStatusBarOrientation")
-  }
-  
-  func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {
-    logger.log("\(self.className) willChangeStatusBarFrame")
-  }
-  
-  func application(_ application: UIApplication, didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
-    logger.log("\(self.className) didChangeStatusBarFrame")
-  }
-  
-  // MARK: - Notifications
-  
-  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    logger.log("\(self.className) didRegisterForRemoteNotificationsWithDeviceToken")
-  }
-  
-  func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-    logger.log("\(self.className) didFailToRegisterForRemoteNotificationsWithError")
-  }
-  
-  func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-    logger.log("\(self.className) didReceiveRemoteNotification")
-  }
-  
-  // MARK: - Background
-  
-  func applicationDidEnterBackground(_ application: UIApplication) {
-    logger.log("\(self.className) applicationDidEnterBackground")
-  }
-  
-  func applicationWillEnterForeground(_ application: UIApplication) {
-    logger.log("\(self.className) applicationWillEnterForeground")
-  }
-  
-  func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool{
-    return true
-  }
-  
-  private func setupWindow() {
-    window = UIWindow(frame: UIScreen.main.bounds)
-    guard let window = window else { fatalError() }
-    // TODO: Need to implentation
-    window.rootViewController = MainTabBarController()
-    window.makeKeyAndVisible()
-  }
-
-  
-
-  // MARK: - Core Data stack
-
-  lazy var persistentContainer: NSPersistentContainer = {
-    /*
-     The persistent container for the application. This implementation
-     creates and returns a container, having loaded the store for the
-     application to it. This property is optional since there are legitimate
-     error conditions that could cause the creation of the store to fail.
-     */
-    let container = NSPersistentContainer(name: "Video")
-    container.loadPersistentStores(completionHandler: { _, error in
-      if let error = error as NSError? {
-        // Replace this implementation with code to handle the error appropriately.
-        // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-
-        /*
-         Typical reasons for an error here include:
-         * The parent directory does not exist, cannot be created, or disallows writing.
-         * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-         * The device is out of space.
-         * The store could not be migrated to the current model version.
-         Check the error message to determine what the actual problem was.
-         */
-        fatalError("Unresolved error \(error), \(error.userInfo)")
-      }
-    })
-    return container
-  }()
-
-  lazy var viewContext: NSManagedObjectContext = {
-    persistentContainer.viewContext
-  }()
-
-  private func setupCoreDataDB() {}
 }
 
 // MARK: - Log
 
 extension AppDelegate {
   private func setupLogConfigure() {
-    logger.configure([.fault, .error, .debug, .info], shouldShow: false, shouldCache: true)
+    logger.configure([.fault, .error, .debug, .info, .defaultLevel], shouldShow: false, shouldCache: true)
   }
 
   private func setupLogTextView() {
@@ -176,12 +80,5 @@ extension AppDelegate {
         ])
       }
     #endif
-  }
-}
-
-extension UIApplication {
-  static var viewContext: NSManagedObjectContext {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    return appDelegate.viewContext
   }
 }

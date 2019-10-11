@@ -1,6 +1,6 @@
 // LogTextView.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/9/18.
+// Created by Jerome Hsieh on 2019/10/5.
 
 /// NOTE: Work with CGFloatExtension.swift file.
 import UIKit
@@ -32,6 +32,12 @@ extension UIView {
 
   func addSubview(_ subview: UIView, constraints: [Constraint]) {
     addSubview(subview)
+    subview.translatesAutoresizingMaskIntoConstraints = false
+    addConstraints(constraints.map { $0(subview, self) })
+  }
+
+  func insertSubview(_ subview: UIView, at: Int, constraints: [Constraint]) {
+    insertSubview(subview, at: at)
     subview.translatesAutoresizingMaskIntoConstraints = false
     addConstraints(constraints.map { $0(subview, self) })
   }
