@@ -10,6 +10,7 @@
 1. 需在 Build Settings 替換掉所有的 NewProject
 1. 出現 The folder “Assets.xcassets” doesn’t exist.，是因為沒有改 project 中目錄的名稱。
     ![修改選中目錄名稱](./修改選中目錄名稱.png)
+1. 需要 delete 根目錄的 .git file, 在加入 Source Tree
         
 #### New Project 做了什麼呢？
 1. Add git, gitignore
