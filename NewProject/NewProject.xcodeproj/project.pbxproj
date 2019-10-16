@@ -19,6 +19,7 @@
 		0264474F2327CF6300822485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0264474D2327CF6300822485 /* LaunchScreen.storyboard */; };
 		0269A8E5233DAAD900A4CEC9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269A8E4233DAAD900A4CEC9 /* BaseView.swift */; };
 		0269A8E7233DAB0E00A4CEC9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */; };
+		026A4E38235702D400993CD9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A4E37235702D400993CD9 /* R.generated.swift */; };
 		02BEA1C82331D5F700C3E317 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1C62331D5F700C3E317 /* CoreDataConnect.swift */; };
 		02BEA1C92331D5F700C3E317 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1C72331D5F700C3E317 /* NSPersistentContainerExtension.swift */; };
 		02BEA1CC2331D61100C3E317 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CB2331D61100C3E317 /* ImageLoader.swift */; };
@@ -73,6 +74,7 @@
 		026447502327CF6300822485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0269A8E4233DAAD900A4CEC9 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		026A4E37235702D400993CD9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		02BEA1C62331D5F700C3E317 /* CoreDataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 		02BEA1C72331D5F700C3E317 /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
 		02BEA1CB2331D61100C3E317 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		026447582327D06500822485 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				026A4E37235702D400993CD9 /* R.generated.swift */,
 				0264474B2327CF6300822485 /* Assets.xcassets */,
 				026447502327CF6300822485 /* Info.plist */,
 				0264474D2327CF6300822485 /* LaunchScreen.storyboard */,
@@ -523,6 +526,7 @@
 				0269A8E7233DAB0E00A4CEC9 /* UIColorExtension.swift in Sources */,
 				020AB43D2350AD4E00ED6A6A /* PersistentContainerManager.swift in Sources */,
 				026447452327CF6200822485 /* AppDelegate.swift in Sources */,
+				026A4E38235702D400993CD9 /* R.generated.swift in Sources */,
 				02F9972423346DFE00EE21CA /* Coordinator.swift in Sources */,
 				02F9971F23346DF000EE21CA /* MainTabBarController.swift in Sources */,
 				02BEA1EB2331D64D00C3E317 /* UIViewController+Alerts.swift in Sources */,
