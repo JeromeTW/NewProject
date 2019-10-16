@@ -8,6 +8,8 @@
 1. 修改 Scheme Name 時，點擊 Scheme 然後點擊 Enter 鍵才能修改。
 1. 需要重新 pod install
 1. 需在 Build Settings 替換掉所有的 NewProject
+1. 出現 The folder “Assets.xcassets” doesn’t exist.，是因為沒有改 project 中目錄的名稱。
+    ![修改選中目錄名稱](./修改選中目錄名稱.png)
         
 #### New Project 做了什麼呢？
 1. Add git, gitignore
