@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  groupsync
+
+  Created by JEROME on 2017/10/5.
+  Copyright © 2017年 JEROME. All rights reserved.
+*/
+
+"common_cancel"      = "取消";
+"common_ok"   = "確定";
+"common_start"   = "開始";
+"inputGroupName" = "輸入 Group Name";
+"inputPassword" = "輸入密碼";
+"groupSync" = "Group Sync";
+"notValidLogin" = "帳號或密碼不正確。";
+"invalidFile" = "下載的檔案無效。";
+"internectNotReachable" = "無法連線網路。";
+"noResponseData" = "服務器沒有回應。";
+"unknownException" = "未知異常，請稍後再試。";
+"accessDenied" = "沒有獲取使用通訊錄的權限。";
+"removeAndImport" = "清除並匯入";
+"removeMessage" = "即將有屬於 placeholder1 群組的舊資料 placeholder2 筆將被清除，確定繼續？";
+"warning" = "警告";
+"importSuccessfully" = "匯入成功。";
+"appHint" = "Group Sync 將協助您將特定群組的聯絡人清單匯入至您的手機通訊錄，日後也可以將整個群組的聯絡人清單進行更新。請輸入群組名稱以及密碼後進行匯入。";

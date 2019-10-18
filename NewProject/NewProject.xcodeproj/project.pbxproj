@@ -12,6 +12,8 @@
 		020AB4402350AF3800ED6A6A /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1C62331D5F700C3E317 /* CoreDataConnect.swift */; };
 		020AB4412350AF3B00ED6A6A /* PersistentContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020AB43C2350AD4E00ED6A6A /* PersistentContainerManager.swift */; };
 		020AB4422350AF3D00ED6A6A /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1C72331D5F700C3E317 /* NSPersistentContainerExtension.swift */; };
+		0239358C2359607A009E08E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0239358E2359607A009E08E3 /* InfoPlist.strings */; };
+		0239358F23596089009E08E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0239359123596089009E08E3 /* Localizable.strings */; };
 		025B06A82358590000060A28 /* LoginTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B06A52358590000060A28 /* LoginTextFieldView.xib */; };
 		025B06A92358590000060A28 /* LoginTextFieldSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B06A62358590000060A28 /* LoginTextFieldSuperView.swift */; };
 		025B06AA2358590000060A28 /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B06A72358590000060A28 /* LoginTextFieldView.swift */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		020AB43C2350AD4E00ED6A6A /* PersistentContainerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerManager.swift; sourceTree = "<group>"; };
 		020AB43E2350AF1800ED6A6A /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		0239358D2359607A009E08E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0239359023596089009E08E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		025B06A52358590000060A28 /* LoginTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginTextFieldView.xib; sourceTree = "<group>"; };
 		025B06A62358590000060A28 /* LoginTextFieldSuperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldSuperView.swift; sourceTree = "<group>"; };
 		025B06A72358590000060A28 /* LoginTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		026447582327D06500822485 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				0239358E2359607A009E08E3 /* InfoPlist.strings */,
+				0239359123596089009E08E3 /* Localizable.strings */,
 				026A4E37235702D400993CD9 /* R.generated.swift */,
 				0264474B2327CF6300822485 /* Assets.xcassets */,
 				026447502327CF6300822485 /* Info.plist */,
@@ -401,7 +407,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0264474F2327CF6300822485 /* LaunchScreen.storyboard in Resources */,
+				0239358C2359607A009E08E3 /* InfoPlist.strings in Resources */,
 				025B06A82358590000060A28 /* LoginTextFieldView.xib in Resources */,
+				0239358F23596089009E08E3 /* Localizable.strings in Resources */,
 				0264474C2327CF6300822485 /* Assets.xcassets in Resources */,
 				0264474A2327CF6200822485 /* Main.storyboard in Resources */,
 				02BEA1EE2331D64D00C3E317 /* JeromeNavigationBarStatusBarBaseVC.xib in Resources */,
@@ -584,6 +592,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0239358E2359607A009E08E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0239358D2359607A009E08E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0239359123596089009E08E3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0239359023596089009E08E3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		026447482327CF6200822485 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

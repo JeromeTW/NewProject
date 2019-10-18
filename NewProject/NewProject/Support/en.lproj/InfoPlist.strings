@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  groupsync
+
+  Created by JEROME on 2017/10/6.
+  Copyright © 2017年 JEROME. All rights reserved.
+*/
+"NSContactsUsageDescription" = "此功能需要取得通訊錄權限。";
+"CFBundleDisplayName" = "GroupSync";
+"CFBundleName" = "GroupSync";
