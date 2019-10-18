@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class LoginTextFieldSuperView: UIView {
+@IBDesignable class LoginTextFieldSuperView: BaseView {
   
   override func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
