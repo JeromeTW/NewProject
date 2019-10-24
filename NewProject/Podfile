@@ -10,7 +10,7 @@ target 'NewProject' do
   pod 'ReachabilitySwift'
   pod 'SwiftFormat/CLI'
   pod 'SnapKit', '~> 4.0'
-  target 'ImageLoaderTests' do
+  target 'Tests' do
     inherit! :search_paths
   end
 end
