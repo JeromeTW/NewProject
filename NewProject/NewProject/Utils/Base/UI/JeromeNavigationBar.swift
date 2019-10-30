@@ -30,6 +30,7 @@ protocol HasJeromeNavigationBar: UIViewController {
 
 extension HasJeromeNavigationBar {
   func setupSatusBarFrameChangedObserver() {
+    updateTopView()
     observer = NotificationCenter.default.addObserver(forName: UIApplication.willChangeStatusBarFrameNotification, object: nil, queue: nil) { [weak self] _ in
       DispatchQueue.main.async {
         guard let self = self else {
