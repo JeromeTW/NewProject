@@ -5,6 +5,8 @@
 import Foundation
 import os
 
+// MARK: - NOTE: Need DateExtension.swift file
+
 enum LogLevel: Int, CustomStringConvertible {
   var description: String {
     switch self {
@@ -161,12 +163,4 @@ func logN(_ items: Any,
           function: String = #function,
           line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .normal, file: file, function: function, line: line)
-}
-
-extension Date {
-  func toString(dateFormat: String = "yyyy-MM-dd HH:mm:ss.SSS") -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = dateFormat
-    return dateFormatter.string(from: self)
-  }
 }
