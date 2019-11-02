@@ -8,7 +8,7 @@ class SypQueue: OperationQueue {
   
   var networkOperationFiredCounter = 0 {
     didSet {
-      logger.log("networkOperationFiredCounter: \(networkOperationFiredCounter)", theOSLog: .image)
+      logI("networkOperationFiredCounter: \(networkOperationFiredCounter)", theOSLog: .image)
     }
   }
   
@@ -56,7 +56,7 @@ class ImageLoader: NSObject {
     } else {
       // 檢查是否有重複的下載圖片請求
       if let prevoiusOperation = requestOperationDictionary[url] {
-        logger.log("重複請求: \(url)", theOSLog: .network, level: .error)
+        logE("重複請求: \(url)", theOSLog: .network)
 //        repeatRequiresHandler(url: url)
       }
       
@@ -93,16 +93,16 @@ class ImageLoader: NSObject {
               self.imageCache.setObject(image, forKey: url.absoluteString as NSString)
               mainThreadCompletionHandler(image: image, url)
             } else {
-              logger.log("Data Format Wrong", theOSLog: .image, level: .error)
+              logE("Data Format Wrong", theOSLog: .image)
               mainThreadCompletionHandler(image: nil, url)
             }
           } else {
-            logger.log("No Data", theOSLog: .image, level: .error)
+            logE("No Data", theOSLog: .image)
             mainThreadCompletionHandler(image: nil, url)
           }
 
         case let .failure(error):
-          logger.log(error.localizedDescription, theOSLog: .image, level: .error)
+          logE(error, theOSLog: .image)
           mainThreadCompletionHandler(image: nil, url)
         }
       }
@@ -146,6 +146,6 @@ class ImageLoader: NSObject {
 
 extension ImageLoader {
   override func observeValue(forKeyPath _: String?, of _: Any?, change _: [NSKeyValueChangeKey: Any]?, context _: UnsafeMutableRawPointer?) {
-    logger.log("operationCount: \(queue.operationCount)", theOSLog: .image)
+    logI("operationCount: \(queue.operationCount)", theOSLog: .image)
   }
 }

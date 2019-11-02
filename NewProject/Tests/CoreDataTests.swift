@@ -67,7 +67,7 @@ class CoreDataTests: XCTestCase {
 //      try coreDataConnect.delete(type: VideoCategory.self, predicate: nil)
 //      try coreDataConnect.delete(type: Video.self, predicate: nil)
 //    } catch {
-//      logger.log("Error: \(error.localizedDescription)", level: .error)
+//      logE(error)
 //    }
   }
 /*
@@ -96,7 +96,7 @@ class CoreDataTests: XCTestCase {
       let count = coreDataConnect.getCount(type: VideoCategory.self, predicate: nil, aContext: context)
       XCTAssert(count == 5)
     } catch {
-      logger.log("Error: \(error.localizedDescription)", level: .error)
+      logE(error)
       XCTFail("")
     }
   }
@@ -109,7 +109,7 @@ class CoreDataTests: XCTestCase {
     } catch VideoCategoryError.duplicateCategoryName {
       // Pass Test
     } catch {
-      logger.log("Error: \(error.localizedDescription)", level: .error)
+      logE(error)
     }
   }
 
@@ -126,7 +126,7 @@ class CoreDataTests: XCTestCase {
       let count = coreDataConnect.getCount(type: Video.self, predicate: nil, aContext: context)
       XCTAssert(count == 3)
     } catch {
-      logger.log("Error: \(error.localizedDescription)", level: .error)
+      logE(error)
       XCTFail("")
     }
   }
@@ -144,7 +144,7 @@ class CoreDataTests: XCTestCase {
     } catch YoutubeHelperError.duplicateVideoInTheSameCategory {
       // Pass Test
     } catch {
-      logger.log("Error: \(error.localizedDescription)", level: .error)
+      logE(error)
       XCTFail("")
     }
   }
@@ -172,7 +172,7 @@ class CoreDataTests: XCTestCase {
     } catch YoutubeHelperError.duplicateVideoInTheSameCategory {
       XCTFail("User Can insert duplicate videos in the different category.")
     } catch {
-      logger.log("Error: \(error.localizedDescription)", level: .error)
+      logE(error)
       XCTFail("")
     }
   }
@@ -196,7 +196,7 @@ class CoreDataTests: XCTestCase {
       XCTAssert(videoCount == 0)
       // Pass Test
     } catch {
-      logger.log("Error: \(error.localizedDescription)", level: .error)
+      logE(error)
       XCTFail("")
     }
   }

@@ -7,52 +7,52 @@ import UIKit
 class BaseViewController: UIViewController {
   // MARK: - ViewController lifecycle
   deinit {
-    logger.log("\(self.className) deinit")
+    logI("\(self.className) deinit")
   }
   
   override func loadView() {
-    logger.log("\(self.className) loadView")
+    logI("\(self.className) loadView")
     super.loadView()
     
   }
   
   override func viewDidLoad() {
-    logger.log("\(self.className) viewDidLoad")
+    logI("\(self.className) viewDidLoad")
     super.viewDidLoad()
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    logger.log("\(self.className) viewWillAppear:")
+    logI("\(self.className) viewWillAppear:")
     super.viewWillAppear(animated)
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    logger.log("\(self.className) viewDidAppear:")
+    logI("\(self.className) viewDidAppear:")
     super.viewDidAppear(animated)
   }
   
   override func viewWillLayoutSubviews() {
-    logger.log("\(self.className) viewWillLayoutSubviews")
+    logI("\(self.className) viewWillLayoutSubviews")
     super.viewWillLayoutSubviews()
   }
   
   override func viewDidLayoutSubviews() {
-    logger.log("\(self.className) viewDidLayoutSubviews")
+    logI("\(self.className) viewDidLayoutSubviews")
     super.viewDidLayoutSubviews()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
-    logger.log("\(self.className) viewWillDisappear:")
+    logI("\(self.className) viewWillDisappear:")
     super.viewWillDisappear(animated)
   }
   
   override func viewDidDisappear(_ animated: Bool) {
-    logger.log("\(self.className) viewDidDisappear:")
+    logI("\(self.className) viewDidDisappear:")
     super.viewDidDisappear(animated)
   }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    logger.log("\(self.className) viewWillTransition:")
+    logI("\(self.className) viewWillTransition:")
     super.viewWillTransition(to: size, with: coordinator)
   }
   // MARK: - Inherit method

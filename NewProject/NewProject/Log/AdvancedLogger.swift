@@ -21,7 +21,7 @@ class AdvancedLogger: BaseLogger {
     do {
       try FileManager.default.saveLog(logString)
     } catch {
-      log(error.localizedDescription)
+      logE(error)
     }
   }
 }

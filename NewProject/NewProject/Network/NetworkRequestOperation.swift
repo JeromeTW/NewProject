@@ -47,14 +47,14 @@ class NetworkRequestOperation: AsynchronousOperation {
   }
 
   override func cancel() {
-    logger.log("task.cancel()\n")
+    logI("task.cancel()\n")
     task.cancel()
     super.cancel()
     completeOperation()
   }
 
   override func main() {
-    logger.log("task.resume()\n")
+    logI("task.resume()\n")
     task!.resume()
     startDate = Date()
     super.main()

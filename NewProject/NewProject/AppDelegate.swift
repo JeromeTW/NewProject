@@ -18,14 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
-    logger.log("NSHomeDirectory:\(NSHomeDirectory())", level: .debug)
+    logD("NSHomeDirectory:\(NSHomeDirectory())")
     persistentContainerManager.setupCoreDataDB()
     #if TEST
-      print("🌘 TEST")
+      logD("🌘 TEST")
       setupWindow(rootViewController: UIViewController())
       return true
     #else
-      print("🌘 NOT TEST")
+      logD("🌘 NOT TEST")
       setupWindow(rootViewController: MainTabBarController())
       setupLogTextView()
       return true
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     do {
       try persistentContainerManager.persistentContainer.saveContext()
     } catch {
-      logger.log("Error:\(error.localizedDescription)", level: .error)
+      logE(error)
     }
   }
 }
@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
   private func setupLogConfigure() {
-    logger.configure([.fault, .error, .debug, .info, .defaultLevel], shouldShow: false, shouldCache: true)
+    logger.configure([.fault, .error, .debug, .info, .normal], shouldShow: false, shouldCache: true)
   }
 
   private func setupLogTextView() {

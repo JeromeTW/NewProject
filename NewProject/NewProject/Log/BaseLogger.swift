@@ -16,12 +16,12 @@ enum LogLevel: Int, CustomStringConvertible {
       return "🐌 Debug"
     case .info:
       return "📗 Info"
-    case .defaultLevel:
+    case .normal:
       return "🍋 Default"
     }
   }
 
-  case fault, error, debug, info, defaultLevel
+  case fault, error, debug, info, normal
   
   var theOSLogType: OSLogType {
     switch self {
@@ -33,7 +33,7 @@ enum LogLevel: Int, CustomStringConvertible {
       return .debug
     case .info:
       return .info
-    case .defaultLevel:
+    case .normal:
       return .default
     }
   }
@@ -85,10 +85,10 @@ class BaseLogger {
 
   func log(_ items: Any,
            theOSLog: JeOSLog = JeOSLog.defaultLog,
-           level: LogLevel = .defaultLevel,
-           file: String = #file,
-           function: String = #function,
-           line: Int = #line) {
+           level: LogLevel = .normal,
+           file: String,
+           function: String,
+           line: Int) {
     #if DEBUG
       if logLevels.contains(level) {
         let fileName = file.components(separatedBy: "/").last?.components(separatedBy: ".").first ?? ""
@@ -109,6 +109,54 @@ class BaseLogger {
 
   func show(_: String) {} // 在 AdvancedLogger 中實作
   func cache(_: String) {} // 在 AdvancedLogger 中實作
+}
+
+func logF(_ items: Any,
+      theOSLog: JeOSLog = JeOSLog.defaultLog,
+      file: String = #file,
+      function: String = #function,
+      line: Int = #line) {
+  logger.log(items, theOSLog: theOSLog, level: .fault, file: file, function: function, line: line)
+}
+
+func logE(_ items: Any,
+      theOSLog: JeOSLog = JeOSLog.defaultLog,
+      file: String = #file,
+      function: String = #function,
+      line: Int = #line) {
+  logger.log(items, theOSLog: theOSLog, level: .error, file: file, function: function, line: line)
+}
+
+func logE(_ error: Error,
+      theOSLog: JeOSLog = JeOSLog.defaultLog,
+      file: String = #file,
+      function: String = #function,
+      line: Int = #line) {
+  logger.log("Error: \(error.localizedDescription)", theOSLog: theOSLog, level: .error, file: file, function: function, line: line)
+}
+
+func logD(_ items: Any,
+      theOSLog: JeOSLog = JeOSLog.defaultLog,
+      file: String = #file,
+      function: String = #function,
+      line: Int = #line) {
+  logger.log(items, theOSLog: theOSLog, level: .debug, file: file, function: function, line: line)
+}
+
+func logI(_ items: Any,
+      theOSLog: JeOSLog = JeOSLog.defaultLog,
+      file: String = #file,
+      function: String = #function,
+      line: Int = #line) {
+  logger.log(items, theOSLog: theOSLog, level: .info, file: file, function: function, line: line)
+}
+
+func logN(_ items: Any,
+      theOSLog: JeOSLog = JeOSLog.defaultLog,
+      file: String = #file,
+      function: String = #function,
+      line: Int = #line) {
+  logger.log(items, theOSLog: theOSLog, level: .normal, file: file, function: function, line: line)
 }
 
 extension Date {

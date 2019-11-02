@@ -57,7 +57,7 @@ class AsynchronousOperation: Operation {
   ///
   /// This will result in the appropriate KVN of isFinished and isExecuting
   func completeOperation() {
-    logger.log("completeOperation")
+    logI("completeOperation")
     if isExecuting {
       isExecuting = false
       isFinished = true
@@ -65,7 +65,7 @@ class AsynchronousOperation: Operation {
   }
 
   override func start() {
-    logger.log("start")
+    logI("start")
     guard isCancelled == false else {
       isFinished = true
       return
@@ -77,6 +77,6 @@ class AsynchronousOperation: Operation {
   }
   
   override func main() {
-    logger.log("main")
+    logI("main")
   }
 }
