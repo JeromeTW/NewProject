@@ -37,7 +37,6 @@ enum LogLevel: Int, CustomStringConvertible {
       return .default
     }
   }
-  
 }
 
 #if TEST
@@ -45,7 +44,6 @@ enum LogLevel: Int, CustomStringConvertible {
 #else
   let logger = AdvancedLogger() // APP Target 用這個，此包含 UI 和 Log 檔案儲存。
 #endif
-
 
 enum JeOSLog {
   static let subsystem = "me.jerome.Mod"
