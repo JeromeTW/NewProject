@@ -1,15 +1,11 @@
-//
-//  LoginTextFieldView.swift
-//  VCLifeCycle
-//
-//  Created by JEROME on 2019/10/17.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// LoginTextFieldView.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh.
 
 import UIKit
 
 class LoginTextFieldView: BaseView {
-  @IBOutlet weak var splitLineView: UIView!
-  @IBOutlet weak var textField: UITextField!
-  @IBOutlet weak var label: UILabel!
+  @IBOutlet var splitLineView: UIView!
+  @IBOutlet var textField: UITextField!
+  @IBOutlet var label: UILabel!
 }

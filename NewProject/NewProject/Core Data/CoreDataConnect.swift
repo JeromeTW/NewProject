@@ -1,6 +1,6 @@
 // CoreDataConnect.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/10/7.
+// Created by Jerome Hsieh.
 
 import CoreData
 import UIKit
@@ -9,7 +9,7 @@ class CoreDataConnect {
   let persistentContainer: NSPersistentContainer!
 
   lazy var backgroundContext: NSManagedObjectContext = {
-    return persistentContainer.newBackgroundContext()
+    persistentContainer.newBackgroundContext()
   }()
 
   lazy var viewContext = persistentContainer.viewContext

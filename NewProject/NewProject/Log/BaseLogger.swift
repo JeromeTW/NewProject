@@ -1,6 +1,6 @@
 // BaseLogger.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/9/18.
+// Created by Jerome Hsieh.
 
 import Foundation
 import os
@@ -22,7 +22,7 @@ enum LogLevel: Int, CustomStringConvertible {
   }
 
   case fault, error, debug, info, normal
-  
+
   var theOSLogType: OSLogType {
     switch self {
     case .fault:
@@ -110,57 +110,56 @@ class BaseLogger {
 }
 
 func logF(_ items: Any,
-      theOSLog: JeOSLog = JeOSLog.defaultLog,
-      file: String = #file,
-      function: String = #function,
-      line: Int = #line) {
+          theOSLog: JeOSLog = JeOSLog.defaultLog,
+          file: String = #file,
+          function: String = #function,
+          line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .fault, file: file, function: function, line: line)
   // Need to import Crashlytics
   //  Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["msg":"\(items)"])
 }
 
 func logE(_ items: Any,
-      theOSLog: JeOSLog = JeOSLog.defaultLog,
-      file: String = #file,
-      function: String = #function,
-      line: Int = #line) {
+          theOSLog: JeOSLog = JeOSLog.defaultLog,
+          file: String = #file,
+          function: String = #function,
+          line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .error, file: file, function: function, line: line)
   // Need to import Crashlytics
   // Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["msg":"\(items)"])
 }
 
 func logE(_ error: Error,
-      theOSLog: JeOSLog = JeOSLog.defaultLog,
-      file: String = #file,
-      function: String = #function,
-      line: Int = #line) {
+          theOSLog: JeOSLog = JeOSLog.defaultLog,
+          file: String = #file,
+          function: String = #function,
+          line: Int = #line) {
   logger.log("Error: \(error.localizedDescription)", theOSLog: theOSLog, level: .error, file: file, function: function, line: line)
   // Need to import Crashlytics
   // Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["msg":error.localizedDescription])
-
 }
 
 func logD(_ items: Any,
-      theOSLog: JeOSLog = JeOSLog.defaultLog,
-      file: String = #file,
-      function: String = #function,
-      line: Int = #line) {
+          theOSLog: JeOSLog = JeOSLog.defaultLog,
+          file: String = #file,
+          function: String = #function,
+          line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .debug, file: file, function: function, line: line)
 }
 
 func logI(_ items: Any,
-      theOSLog: JeOSLog = JeOSLog.defaultLog,
-      file: String = #file,
-      function: String = #function,
-      line: Int = #line) {
+          theOSLog: JeOSLog = JeOSLog.defaultLog,
+          file: String = #file,
+          function: String = #function,
+          line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .info, file: file, function: function, line: line)
 }
 
 func logN(_ items: Any,
-      theOSLog: JeOSLog = JeOSLog.defaultLog,
-      file: String = #file,
-      function: String = #function,
-      line: Int = #line) {
+          theOSLog: JeOSLog = JeOSLog.defaultLog,
+          file: String = #file,
+          function: String = #function,
+          line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .normal, file: file, function: function, line: line)
 }
 

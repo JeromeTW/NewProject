@@ -1,10 +1,6 @@
-//
-//  VideoCoordinator.swift
-//  JeromeYoutube
-//
-//  Created by JEROME on 2019/9/18.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// VideoCoordinator.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh.
 
 import UIKit
 
@@ -12,7 +8,7 @@ class VideoCoordinator: Coordinator {
   var navigationController: CoordinatedNavigationController
   // TODO: use your storyboard
   let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-  
+
   init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController()) {
     self.navigationController = navigationController
     navigationController.navigationBar.prefersLargeTitles = true
@@ -24,7 +20,7 @@ class VideoCoordinator: Coordinator {
 //    navigationController.navigationBar.isHidden = true
 //    navigationController.viewControllers = [categoryListVC]
   }
-  
+
   // Use Coordinator change page sample.
 //  func videoCategoryDetail(category: VideoCategory) {
 //    let categoryDetailVC = CategoryDetailVC.instantiate(storyboard: storyboard)

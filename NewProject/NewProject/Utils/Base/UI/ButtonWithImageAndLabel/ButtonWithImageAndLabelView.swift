@@ -1,16 +1,12 @@
-//
-//  ButtonWithImageAndLabelView.swift
-//  MoshiMember
-//
-//  Created by JEROME on 2019/10/22.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// ButtonWithImageAndLabelView.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh.
 
 import UIKit
 
 class ButtonWithImageAndLabelView: BaseView {
-  @IBOutlet weak var button: UIButton!
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var label: UILabel!
-  @IBOutlet weak var imageAndLabelHeight: NSLayoutConstraint!
+  @IBOutlet var button: UIButton!
+  @IBOutlet var imageView: UIImageView!
+  @IBOutlet var label: UILabel!
+  @IBOutlet var imageAndLabelHeight: NSLayoutConstraint!
 }

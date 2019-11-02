@@ -1,6 +1,6 @@
 // LogTextView.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/10/5.
+// Created by Jerome Hsieh.
 
 /// NOTE: Work with CGFloatExtension.swift file.
 import UIKit

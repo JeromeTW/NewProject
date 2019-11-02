@@ -1,62 +1,64 @@
 // BaseViewController.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/9/18.
+// Created by Jerome Hsieh.
 
 import UIKit
 
 class BaseViewController: UIViewController {
   // MARK: - ViewController lifecycle
+
   deinit {
     logI("\(self.className) deinit")
   }
-  
+
   override func loadView() {
-    logI("\(self.className) loadView")
+    logI("\(className) loadView")
     super.loadView()
-    
   }
-  
+
   override func viewDidLoad() {
-    logI("\(self.className) viewDidLoad")
+    logI("\(className) viewDidLoad")
     super.viewDidLoad()
   }
-  
+
   override func viewWillAppear(_ animated: Bool) {
-    logI("\(self.className) viewWillAppear:")
+    logI("\(className) viewWillAppear:")
     super.viewWillAppear(animated)
   }
-  
+
   override func viewDidAppear(_ animated: Bool) {
-    logI("\(self.className) viewDidAppear:")
+    logI("\(className) viewDidAppear:")
     super.viewDidAppear(animated)
   }
-  
+
   override func viewWillLayoutSubviews() {
-    logI("\(self.className) viewWillLayoutSubviews")
+    logI("\(className) viewWillLayoutSubviews")
     super.viewWillLayoutSubviews()
   }
-  
+
   override func viewDidLayoutSubviews() {
-    logI("\(self.className) viewDidLayoutSubviews")
+    logI("\(className) viewDidLayoutSubviews")
     super.viewDidLayoutSubviews()
   }
-  
+
   override func viewWillDisappear(_ animated: Bool) {
-    logI("\(self.className) viewWillDisappear:")
+    logI("\(className) viewWillDisappear:")
     super.viewWillDisappear(animated)
   }
-  
+
   override func viewDidDisappear(_ animated: Bool) {
-    logI("\(self.className) viewDidDisappear:")
+    logI("\(className) viewDidDisappear:")
     super.viewDidDisappear(animated)
   }
-  
+
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    logI("\(self.className) viewWillTransition:")
+    logI("\(className) viewWillTransition:")
     super.viewWillTransition(to: size, with: coordinator)
   }
+
   // MARK: - Inherit method
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+  override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
     view.endEditing(true)
   }
 }

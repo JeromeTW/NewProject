@@ -31,4 +31,4 @@
 --wraparguments after-first
 --wrapcollections before-first
 --xcodeindentation disabled
---header "{file}\nCopyright (c) {year} Jerome Hsieh. All rights reserved.\nCreated by Jerome Hsieh on {created}."
+--header "{file}\nCopyright (c) {year} Jerome Hsieh. All rights reserved.\nCreated by Jerome Hsieh."

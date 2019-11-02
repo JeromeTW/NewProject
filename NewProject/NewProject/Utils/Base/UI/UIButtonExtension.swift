@@ -1,19 +1,15 @@
-//
-//  UIButtonExtension.swift
-//  MoshiMember
-//
-//  Created by JEROME on 2019/10/18.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// UIButtonExtension.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh.
 
 import UIKit
 
 extension UIButton {
-  func underlineText(_ otherAttrs: [NSAttributedString.Key : Any]? = nil) {
+  func underlineText(_ otherAttrs: [NSAttributedString.Key: Any]? = nil) {
     guard let title = title(for: .normal) else { return }
 
     let titleString = NSMutableAttributedString(string: title)
-    var attrs = [NSAttributedString.Key : Any]()
+    var attrs = [NSAttributedString.Key: Any]()
     if let otherAttrs = otherAttrs {
       attrs = otherAttrs
     }

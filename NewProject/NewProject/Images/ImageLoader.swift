@@ -1,17 +1,16 @@
 // ImageLoader.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/9/18.
+// Created by Jerome Hsieh.
 
 import UIKit
 
 class SypQueue: OperationQueue {
-  
   var networkOperationFiredCounter = 0 {
     didSet {
       logI("networkOperationFiredCounter: \(networkOperationFiredCounter)", theOSLog: .image)
     }
   }
-  
+
   override func addOperation(_ op: Operation) {
     if op is NetworkRequestOperation {
       networkOperationFiredCounter += 1
@@ -25,20 +24,20 @@ class ImageLoader: NSObject {
   private let imageCache = NSCache<NSString, UIImage>()
   lazy var requestOperationDictionary = [URL: AsynchronousOperation]()
   var current: UInt = 0
-  
+
   func synchronized(_ lock: AnyObject, _ closure: () -> Void) {
     objc_sync_enter(lock)
     closure()
     objc_sync_exit(lock)
   }
-  
+
   func next() -> UInt {
     synchronized(self) {
       current += 1
     }
     return current
   }
-  
+
   lazy var queue: SypQueue = {
     var queue = SypQueue()
     queue.name = "ImageLoader"
@@ -59,7 +58,7 @@ class ImageLoader: NSObject {
         logE("重複請求: \(url)", theOSLog: .network)
 //        repeatRequiresHandler(url: url)
       }
-      
+
       let request = APIRequest(url: url)
       func mainThreadCompletionHandler(image innerImage: UIImage?, _ url: URL) {
         DispatchQueue.main.async {
@@ -119,7 +118,7 @@ class ImageLoader: NSObject {
       }
     }
   }
-  
+
 //  private func repeatRequiresHandler(url: URL) {
 //    guard requestOperationDictionary[url] == nil else {
 //      let prevoiusOperation = requestOperationDictionary[url]!

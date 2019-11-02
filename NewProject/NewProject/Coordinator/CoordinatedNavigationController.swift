@@ -1,10 +1,6 @@
-//
-//  CoordinatedNavigationController.swift
-//  NewProject
-//
-//  Created by JEROME on 2019/9/20.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// CoordinatedNavigationController.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh.
 
 import UIKit
 

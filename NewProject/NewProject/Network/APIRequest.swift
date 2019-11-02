@@ -1,6 +1,6 @@
 // APIRequest.swift
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
-// Created by Jerome Hsieh on 2019/9/18.
+// Created by Jerome Hsieh.
 
 import Foundation
 
