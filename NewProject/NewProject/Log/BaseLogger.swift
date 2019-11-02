@@ -117,6 +117,8 @@ func logF(_ items: Any,
       function: String = #function,
       line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .fault, file: file, function: function, line: line)
+  // Need to import Crashlytics
+  //  Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["msg":"\(items)"])
 }
 
 func logE(_ items: Any,
@@ -125,6 +127,8 @@ func logE(_ items: Any,
       function: String = #function,
       line: Int = #line) {
   logger.log(items, theOSLog: theOSLog, level: .error, file: file, function: function, line: line)
+  // Need to import Crashlytics
+  // Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["msg":"\(items)"])
 }
 
 func logE(_ error: Error,
@@ -133,6 +137,9 @@ func logE(_ error: Error,
       function: String = #function,
       line: Int = #line) {
   logger.log("Error: \(error.localizedDescription)", theOSLog: theOSLog, level: .error, file: file, function: function, line: line)
+  // Need to import Crashlytics
+  // Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["msg":error.localizedDescription])
+
 }
 
 func logD(_ items: Any,
