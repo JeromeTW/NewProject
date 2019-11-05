@@ -62,8 +62,8 @@ error do |lane, exception|
 end
 
 before_all do
-  # TODO: 移動到 Appfile 中。
-  ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+  # SLACK_URL 待填
+  # ENV["SLACK_URL"] = ""
   ENV["FASTLANE_SESSION"] = '---\n- !ruby/object:HTTP::Cookie\n  name: myacinfo\n  value: DAWTKNV282699e093f39190ebbec9c5509fb5506f5a77c7f2fdf8eb5183bdab39553abc298f17466f784ad74e12257e3e37c121b537f3888a5aa16e945fc20f0b12c349daf369eac0a8934c3b5b83c5da85bc8d8f0eec75f651730896b7761df18b8ec842c924cd86ba09d82a7864366412eb3b932b71e709108b88be7da829da531293b53b18035f0d067269d16bea2cf36d6bd88d2eb474b82d9e52d9fd68151065bfad1249f6e688acdd63af2f74933ed2ded8788a0c69c046fddc151978c5a46da190d1cfcde4e30a28cb3cf8c994f4b545be6b36e8ca8dd74edce66284dccffd34313624241481194b7ee2aa5339dae2e402ebb4dbb94c23a7ec4ca055bda93ead38ead6fbcb8618f36f8184128e7c08db5628fd76cd0b0c49cf3053ab71a96f55be6858d6e153e9273bfc1d5b846fb121736f9d5d64bdce510edacb1214f80704c715dc1ad968fca24b43275210a474de0e2b4671e6da8e181c087a5e302a96b63e47211fb30ce58599f3ffe33dc1428cd36396637613937373037343336646134633539333530626338323830326237306132313834303639MVRYV2\n  domain: apple.com\n  for_domain: true\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: \n  created_at: 2019-02-20 09:55:39.219174000 +08:00\n  accessed_at: 2019-02-20 10:41:18.371040000 +08:00\n- !ruby/object:HTTP::Cookie\n  name: dqsid\n  value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5N2tkVDhpN1gxb3pfWGwtd0tkU3p3In0.827vErj-yS5p41qE15_UlZxHzTXIdTZEKPiOAWx18zk\n  domain: olympus.itunes.apple.com\n  for_domain: false\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: 1800\n  created_at: &1 2019-02-20 10:41:19.514711000 +08:00\n  accessed_at: *1\n'
   # cocoapods
   
