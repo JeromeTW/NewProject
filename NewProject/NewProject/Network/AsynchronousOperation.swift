@@ -3,6 +3,7 @@
 // Created by Jerome Hsieh.
 
 import Foundation
+import HouLogger
 
 /// Asynchronous Operation base class
 ///
@@ -57,7 +58,7 @@ class AsynchronousOperation: Operation {
   ///
   /// This will result in the appropriate KVN of isFinished and isExecuting
   func completeOperation() {
-    logI("completeOperation")
+    logC("completeOperation")
     if isExecuting {
       isExecuting = false
       isFinished = true
@@ -65,7 +66,7 @@ class AsynchronousOperation: Operation {
   }
 
   override func start() {
-    logI("start")
+    logC("start")
     guard isCancelled == false else {
       isFinished = true
       return
@@ -77,6 +78,6 @@ class AsynchronousOperation: Operation {
   }
 
   override func main() {
-    logI("main")
+    logC("main")
   }
 }

@@ -2,12 +2,13 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
+import HouLogger
 import UIKit
 
 class SypQueue: OperationQueue {
   var networkOperationFiredCounter = 0 {
     didSet {
-      logI("networkOperationFiredCounter: \(networkOperationFiredCounter)", theOSLog: .image)
+      logC("networkOperationFiredCounter: \(networkOperationFiredCounter)")
     }
   }
 
@@ -55,7 +56,7 @@ class ImageLoader: NSObject {
     } else {
       // 檢查是否有重複的下載圖片請求
       if let prevoiusOperation = requestOperationDictionary[url] {
-        logE("重複請求: \(url)", theOSLog: .network)
+        logC("重複請求: \(url)")
 //        repeatRequiresHandler(url: url)
       }
 
@@ -92,16 +93,16 @@ class ImageLoader: NSObject {
               self.imageCache.setObject(image, forKey: url.absoluteString as NSString)
               mainThreadCompletionHandler(image: image, url)
             } else {
-              logE("Data Format Wrong", theOSLog: .image)
+              logC("Data Format Wrong")
               mainThreadCompletionHandler(image: nil, url)
             }
           } else {
-            logE("No Data", theOSLog: .image)
+            logC("No Data")
             mainThreadCompletionHandler(image: nil, url)
           }
 
         case let .failure(error):
-          logE(error, theOSLog: .image)
+          logC(error)
           mainThreadCompletionHandler(image: nil, url)
         }
       }
@@ -145,6 +146,6 @@ class ImageLoader: NSObject {
 
 extension ImageLoader {
   override func observeValue(forKeyPath _: String?, of _: Any?, change _: [NSKeyValueChangeKey: Any]?, context _: UnsafeMutableRawPointer?) {
-    logI("operationCount: \(queue.operationCount)", theOSLog: .image)
+    logC("operationCount: \(queue.operationCount)")
   }
 }

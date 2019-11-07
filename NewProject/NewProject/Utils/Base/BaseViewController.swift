@@ -2,57 +2,58 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
+import HouLogger
 import UIKit
 
 class BaseViewController: UIViewController {
   // MARK: - ViewController lifecycle
 
   deinit {
-    logI("\(self.className) deinit")
+    logC("\(self.className) deinit")
   }
 
   override func loadView() {
-    logI("\(className) loadView")
+    logC("\(className) loadView")
     super.loadView()
   }
 
   override func viewDidLoad() {
-    logI("\(className) viewDidLoad")
+    logC("\(className) viewDidLoad")
     super.viewDidLoad()
   }
 
   override func viewWillAppear(_ animated: Bool) {
-    logI("\(className) viewWillAppear:")
+    logC("\(className) viewWillAppear:")
     super.viewWillAppear(animated)
   }
 
   override func viewDidAppear(_ animated: Bool) {
-    logI("\(className) viewDidAppear:")
+    logC("\(className) viewDidAppear:")
     super.viewDidAppear(animated)
   }
 
   override func viewWillLayoutSubviews() {
-    logI("\(className) viewWillLayoutSubviews")
+    logC("\(className) viewWillLayoutSubviews")
     super.viewWillLayoutSubviews()
   }
 
   override func viewDidLayoutSubviews() {
-    logI("\(className) viewDidLayoutSubviews")
+    logC("\(className) viewDidLayoutSubviews")
     super.viewDidLayoutSubviews()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
-    logI("\(className) viewWillDisappear:")
+    logC("\(className) viewWillDisappear:")
     super.viewWillDisappear(animated)
   }
 
   override func viewDidDisappear(_ animated: Bool) {
-    logI("\(className) viewDidDisappear:")
+    logC("\(className) viewDidDisappear:")
     super.viewDidDisappear(animated)
   }
 
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    logI("\(className) viewWillTransition:")
+    logC("\(className) viewWillTransition:")
     super.viewWillTransition(to: size, with: coordinator)
   }
 

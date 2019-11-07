@@ -2,6 +2,7 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
+import HouLogger
 import CoreData
 import UIKit
 
@@ -139,8 +140,7 @@ class CoreDataConnect {
     do {
       try fetchedResultsController.performFetch()
     } catch {
-      let fetchError = error as NSError
-      logE("\(fetchError), \(fetchError.userInfo)")
+      logE("", error: error)
     }
 
     return fetchedResultsController

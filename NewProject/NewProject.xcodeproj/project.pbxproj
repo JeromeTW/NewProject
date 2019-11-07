@@ -19,8 +19,6 @@
 		0264474A2327CF6200822485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026447482327CF6200822485 /* Main.storyboard */; };
 		0264474C2327CF6300822485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0264474B2327CF6300822485 /* Assets.xcassets */; };
 		0264474F2327CF6300822485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0264474D2327CF6300822485 /* LaunchScreen.storyboard */; };
-		02682A48236D35350022C1F0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02682A47236D35340022C1F0 /* DateExtension.swift */; };
-		02682A49236D35350022C1F0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02682A47236D35340022C1F0 /* DateExtension.swift */; };
 		0269A8E5233DAAD900A4CEC9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269A8E4233DAAD900A4CEC9 /* BaseView.swift */; };
 		0269A8E7233DAB0E00A4CEC9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */; };
 		026A4E38235702D400993CD9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A4E37235702D400993CD9 /* R.generated.swift */; };
@@ -37,9 +35,6 @@
 		02BEA1D12331D62800C3E317 /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CE2331D62800C3E317 /* NetworkRequestOperation.swift */; };
 		02BEA1D22331D62800C3E317 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CF2331D62800C3E317 /* AsynchronousOperation.swift */; };
 		02BEA1D32331D62800C3E317 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D02331D62800C3E317 /* APIRequest.swift */; };
-		02BEA1E52331D64D00C3E317 /* AdvancedLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D52331D64C00C3E317 /* AdvancedLogger.swift */; };
-		02BEA1E62331D64D00C3E317 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D62331D64C00C3E317 /* BaseLogger.swift */; };
-		02BEA1E72331D64D00C3E317 /* LogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D72331D64C00C3E317 /* LogTextView.swift */; };
 		02BEA1E82331D64D00C3E317 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D92331D64D00C3E317 /* NSObjectExtension.swift */; };
 		02BEA1E92331D64D00C3E317 /* DeviceGuruExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */; };
 		02BEA1EA2331D64D00C3E317 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */; };
@@ -53,7 +48,6 @@
 		02BEA2012331DA8F00C3E317 /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CE2331D62800C3E317 /* NetworkRequestOperation.swift */; };
 		02BEA2022331DA9100C3E317 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CF2331D62800C3E317 /* AsynchronousOperation.swift */; };
 		02BEA2032331DA9300C3E317 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D02331D62800C3E317 /* APIRequest.swift */; };
-		02BEA2042331DAB300C3E317 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D62331D64C00C3E317 /* BaseLogger.swift */; };
 		02BEA2052331DB1500C3E317 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CB2331D61100C3E317 /* ImageLoader.swift */; };
 		02F9971F23346DF000EE21CA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9971E23346DF000EE21CA /* MainTabBarController.swift */; };
 		02F9972323346DFE00EE21CA /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9972123346DFE00EE21CA /* VideoCoordinator.swift */; };
@@ -85,7 +79,6 @@
 		0264474B2327CF6300822485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0264474E2327CF6300822485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		026447502327CF6300822485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02682A47236D35340022C1F0 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		0269A8E4233DAAD900A4CEC9 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		026A4E37235702D400993CD9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -102,9 +95,6 @@
 		02BEA1CE2331D62800C3E317 /* NetworkRequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestOperation.swift; sourceTree = "<group>"; };
 		02BEA1CF2331D62800C3E317 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
 		02BEA1D02331D62800C3E317 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		02BEA1D52331D64C00C3E317 /* AdvancedLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedLogger.swift; sourceTree = "<group>"; };
-		02BEA1D62331D64C00C3E317 /* BaseLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLogger.swift; sourceTree = "<group>"; };
-		02BEA1D72331D64C00C3E317 /* LogTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextView.swift; sourceTree = "<group>"; };
 		02BEA1D92331D64D00C3E317 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuruExtension.swift; sourceTree = "<group>"; };
 		02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
@@ -178,7 +168,6 @@
 			children = (
 				0269A8E3233DAA6900A4CEC9 /* Models */,
 				02F9972023346DFE00EE21CA /* Coordinator */,
-				02BEA1D42331D64C00C3E317 /* Log */,
 				02BEA1D82331D64D00C3E317 /* Utils */,
 				02BEA1CD2331D62800C3E317 /* Network */,
 				02BEA1CA2331D61100C3E317 /* Images */,
@@ -260,16 +249,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		02BEA1D42331D64C00C3E317 /* Log */ = {
-			isa = PBXGroup;
-			children = (
-				02BEA1D52331D64C00C3E317 /* AdvancedLogger.swift */,
-				02BEA1D62331D64C00C3E317 /* BaseLogger.swift */,
-				02BEA1D72331D64C00C3E317 /* LogTextView.swift */,
-			);
-			path = Log;
-			sourceTree = "<group>";
-		};
 		02BEA1D82331D64D00C3E317 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +259,6 @@
 				02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */,
 				02BEA1E42331D64D00C3E317 /* StoryboardExtension.swift */,
 				0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */,
-				02682A47236D35340022C1F0 /* DateExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -579,9 +557,7 @@
 				02BEA1C92331D5F700C3E317 /* NSPersistentContainerExtension.swift in Sources */,
 				0282FB46235FD23600CBB8D5 /* LoginTextFieldSuperView.swift in Sources */,
 				0282FB50235FD26300CBB8D5 /* ButtonWithImageAndLabelView.swift in Sources */,
-				02BEA1E62331D64D00C3E317 /* BaseLogger.swift in Sources */,
 				02BEA1E82331D64D00C3E317 /* NSObjectExtension.swift in Sources */,
-				02BEA1E52331D64D00C3E317 /* AdvancedLogger.swift in Sources */,
 				02BEA1EA2331D64D00C3E317 /* CGFloatExtension.swift in Sources */,
 				0269A8E5233DAAD900A4CEC9 /* BaseView.swift in Sources */,
 				02BEA1D32331D62800C3E317 /* APIRequest.swift in Sources */,
@@ -593,10 +569,8 @@
 				02F9972423346DFE00EE21CA /* Coordinator.swift in Sources */,
 				02F9971F23346DF000EE21CA /* MainTabBarController.swift in Sources */,
 				02BEA1EB2331D64D00C3E317 /* UIViewController+Alerts.swift in Sources */,
-				02682A48236D35350022C1F0 /* DateExtension.swift in Sources */,
 				02BEA1F12331D64D00C3E317 /* StoryboardExtension.swift in Sources */,
 				02F9972323346DFE00EE21CA /* VideoCoordinator.swift in Sources */,
-				02BEA1E72331D64D00C3E317 /* LogTextView.swift in Sources */,
 				0282FB51235FD26300CBB8D5 /* ButtonWithImageAndLabelSuperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,10 +582,8 @@
 				02BEA1F92331DA4200C3E317 /* ImageLoaderTests.swift in Sources */,
 				020AB4422350AF3D00ED6A6A /* NSPersistentContainerExtension.swift in Sources */,
 				020AB43F2350AF1800ED6A6A /* CoreDataTests.swift in Sources */,
-				02BEA2042331DAB300C3E317 /* BaseLogger.swift in Sources */,
 				02BEA2052331DB1500C3E317 /* ImageLoader.swift in Sources */,
 				020AB4412350AF3B00ED6A6A /* PersistentContainerManager.swift in Sources */,
-				02682A49236D35350022C1F0 /* DateExtension.swift in Sources */,
 				02BEA2012331DA8F00C3E317 /* NetworkRequestOperation.swift in Sources */,
 				020AB4402350AF3800ED6A6A /* CoreDataConnect.swift in Sources */,
 				02BEA2032331DA9300C3E317 /* APIRequest.swift in Sources */,

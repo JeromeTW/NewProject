@@ -3,6 +3,7 @@
 // Created by Jerome Hsieh.
 
 import CoreData
+import HouLogger
 
 extension NSPersistentContainer {
   func saveContext(backgroundContext: NSManagedObjectContext? = nil) throws {
@@ -11,7 +12,7 @@ extension NSPersistentContainer {
     do {
       try context.save()
     } catch {
-      logE(error)
+      logE("", error: error)
       throw error
     }
   }

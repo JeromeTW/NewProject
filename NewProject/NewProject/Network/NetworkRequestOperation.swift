@@ -3,6 +3,7 @@
 // Created by Jerome Hsieh.
 
 import Foundation
+import HouLogger
 
 class NetworkRequestOperation: AsynchronousOperation {
   typealias APIClientCompletionHandler = (Result<APIResponse<Data?>, APIError>) -> Void
@@ -47,14 +48,14 @@ class NetworkRequestOperation: AsynchronousOperation {
   }
 
   override func cancel() {
-    logI("task.cancel()\n")
+    logC("task.cancel()\n")
     task.cancel()
     super.cancel()
     completeOperation()
   }
 
   override func main() {
-    logI("task.resume()\n")
+    logC("task.resume()\n")
     task!.resume()
     startDate = Date()
     super.main()

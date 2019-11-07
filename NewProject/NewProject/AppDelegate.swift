@@ -2,6 +2,7 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
+import HouLogger
 import UIKit
 
 @UIApplicationMain
@@ -18,14 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
-    logD("NSHomeDirectory:\(NSHomeDirectory())")
+    logC("NSHomeDirectory:\(NSHomeDirectory())")
     persistentContainerManager.setupCoreDataDB()
     #if TEST
-      logD("🌘 TEST")
+      logC("🌘 TEST")
       setupWindow(rootViewController: UIViewController())
       return true
     #else
-      logD("🌘 NOT TEST")
+      logC("🌘 NOT TEST")
       setupWindow(rootViewController: MainTabBarController())
       setupLogTextView()
       return true
@@ -47,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     do {
       try persistentContainerManager.persistentContainer.saveContext()
     } catch {
-      logE(error)
+      logE("", error: error)
     }
   }
 }
@@ -56,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
   private func setupLogConfigure() {
-    logger.configure([.fault, .error, .debug, .info, .normal], shouldShow: false, shouldCache: true)
+    logger.configure(shouldShow: false, shouldCache: true)
   }
 
   private func setupLogTextView() {

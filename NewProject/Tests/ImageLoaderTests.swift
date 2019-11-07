@@ -2,6 +2,7 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
+import HouLogger
 import XCTest
 
 class ImageLoaderTests: XCTestCase {
@@ -9,7 +10,7 @@ class ImageLoaderTests: XCTestCase {
     // This is the setUp() class method.
     // It is called before the first test method begins.
     // Set up any overall initial state here.
-    logger.configure([.fault, .error, .debug, .info], shouldShow: false, shouldCache: true)
+    logger.configure(shouldShow: false, shouldCache: true)
   }
 
   override func setUp() {
@@ -29,7 +30,7 @@ class ImageLoaderTests: XCTestCase {
     imageLoader.queue = spyQueue
     imageLoader.imageByURL(successfulURL) { image, _ in
       if image != nil {
-        logger.log("testImageLoader-1")
+        logC("testImageLoader-1")
         exp.fulfill()
       }
     }

@@ -4,6 +4,7 @@
 
 import CoreData
 import XCTest
+import HouLogger
 
 class CoreDataTests: XCTestCase {
   lazy var coreDataConnect = CoreDataConnect(container: mockPersistantContainer)
@@ -48,7 +49,7 @@ class CoreDataTests: XCTestCase {
     // It is called before the first test method begins.
     // Set up any overall initial state here.
     // 如果 logger.configure 寫在 TestsAppDelegate 中，在這裡會沒有反應，可能是因為在不同的 Target 下。
-    logger.configure([.fault, .error, .debug, .info, .defaultLevel], shouldShow: false, shouldCache: false)
+    logger.configure(shouldShow: false, shouldCache: false)
   }
 
   override func setUp() {
