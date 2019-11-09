@@ -20,7 +20,6 @@
 		0264474C2327CF6300822485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0264474B2327CF6300822485 /* Assets.xcassets */; };
 		0264474F2327CF6300822485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0264474D2327CF6300822485 /* LaunchScreen.storyboard */; };
 		0269A8E5233DAAD900A4CEC9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269A8E4233DAAD900A4CEC9 /* BaseView.swift */; };
-		0269A8E7233DAB0E00A4CEC9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */; };
 		026A4E38235702D400993CD9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A4E37235702D400993CD9 /* R.generated.swift */; };
 		0282FB46235FD23600CBB8D5 /* LoginTextFieldSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0282FB43235FD23600CBB8D5 /* LoginTextFieldSuperView.swift */; };
 		0282FB47235FD23600CBB8D5 /* LoginTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0282FB44235FD23600CBB8D5 /* LoginTextFieldView.xib */; };
@@ -35,7 +34,6 @@
 		02BEA1D12331D62800C3E317 /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CE2331D62800C3E317 /* NetworkRequestOperation.swift */; };
 		02BEA1D22331D62800C3E317 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CF2331D62800C3E317 /* AsynchronousOperation.swift */; };
 		02BEA1D32331D62800C3E317 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D02331D62800C3E317 /* APIRequest.swift */; };
-		02BEA1E82331D64D00C3E317 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D92331D64D00C3E317 /* NSObjectExtension.swift */; };
 		02BEA1E92331D64D00C3E317 /* DeviceGuruExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */; };
 		02BEA1EA2331D64D00C3E317 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */; };
 		02BEA1EB2331D64D00C3E317 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */; };
@@ -49,6 +47,8 @@
 		02BEA2022331DA9100C3E317 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CF2331D62800C3E317 /* AsynchronousOperation.swift */; };
 		02BEA2032331DA9300C3E317 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1D02331D62800C3E317 /* APIRequest.swift */; };
 		02BEA2052331DB1500C3E317 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEA1CB2331D61100C3E317 /* ImageLoader.swift */; };
+		02D5ED612374FC030061DE26 /* exporteImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ED602374FC030061DE26 /* exporteImport.swift */; };
+		02D5ED622374FC030061DE26 /* exporteImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ED602374FC030061DE26 /* exporteImport.swift */; };
 		02F9971F23346DF000EE21CA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9971E23346DF000EE21CA /* MainTabBarController.swift */; };
 		02F9972323346DFE00EE21CA /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9972123346DFE00EE21CA /* VideoCoordinator.swift */; };
 		02F9972423346DFE00EE21CA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9972223346DFE00EE21CA /* Coordinator.swift */; };
@@ -80,7 +80,6 @@
 		0264474E2327CF6300822485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		026447502327CF6300822485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0269A8E4233DAAD900A4CEC9 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		026A4E37235702D400993CD9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		0282FB43235FD23600CBB8D5 /* LoginTextFieldSuperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldSuperView.swift; sourceTree = "<group>"; };
 		0282FB44235FD23600CBB8D5 /* LoginTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginTextFieldView.xib; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 		02BEA1CE2331D62800C3E317 /* NetworkRequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestOperation.swift; sourceTree = "<group>"; };
 		02BEA1CF2331D62800C3E317 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
 		02BEA1D02331D62800C3E317 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		02BEA1D92331D64D00C3E317 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuruExtension.swift; sourceTree = "<group>"; };
 		02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
@@ -107,6 +105,7 @@
 		02BEA1F62331DA4200C3E317 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BEA1F82331DA4200C3E317 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		02BEA1FA2331DA4200C3E317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D5ED602374FC030061DE26 /* exporteImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exporteImport.swift; sourceTree = "<group>"; };
 		02F9971E23346DF000EE21CA /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		02F9972123346DFE00EE21CA /* VideoCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCoordinator.swift; sourceTree = "<group>"; };
 		02F9972223346DFE00EE21CA /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -253,12 +252,11 @@
 			isa = PBXGroup;
 			children = (
 				02BEA1DE2331D64D00C3E317 /* Base */,
-				02BEA1D92331D64D00C3E317 /* NSObjectExtension.swift */,
 				02BEA1DA2331D64D00C3E317 /* DeviceGuruExtension.swift */,
 				02BEA1DB2331D64D00C3E317 /* CGFloatExtension.swift */,
 				02BEA1DC2331D64D00C3E317 /* UIViewController+Alerts.swift */,
 				02BEA1E42331D64D00C3E317 /* StoryboardExtension.swift */,
-				0269A8E6233DAB0E00A4CEC9 /* UIColorExtension.swift */,
+				02D5ED602374FC030061DE26 /* exporteImport.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -543,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D5ED612374FC030061DE26 /* exporteImport.swift in Sources */,
 				02BEA1F02331D64D00C3E317 /* Observable.swift in Sources */,
 				02BEA1D12331D62800C3E317 /* NetworkRequestOperation.swift in Sources */,
 				02BEA1C82331D5F700C3E317 /* CoreDataConnect.swift in Sources */,
@@ -557,11 +556,9 @@
 				02BEA1C92331D5F700C3E317 /* NSPersistentContainerExtension.swift in Sources */,
 				0282FB46235FD23600CBB8D5 /* LoginTextFieldSuperView.swift in Sources */,
 				0282FB50235FD26300CBB8D5 /* ButtonWithImageAndLabelView.swift in Sources */,
-				02BEA1E82331D64D00C3E317 /* NSObjectExtension.swift in Sources */,
 				02BEA1EA2331D64D00C3E317 /* CGFloatExtension.swift in Sources */,
 				0269A8E5233DAAD900A4CEC9 /* BaseView.swift in Sources */,
 				02BEA1D32331D62800C3E317 /* APIRequest.swift in Sources */,
-				0269A8E7233DAB0E00A4CEC9 /* UIColorExtension.swift in Sources */,
 				020AB43D2350AD4E00ED6A6A /* PersistentContainerManager.swift in Sources */,
 				0282FB48235FD23600CBB8D5 /* LoginTextFieldView.swift in Sources */,
 				026447452327CF6200822485 /* AppDelegate.swift in Sources */,
@@ -579,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D5ED622374FC030061DE26 /* exporteImport.swift in Sources */,
 				02BEA1F92331DA4200C3E317 /* ImageLoaderTests.swift in Sources */,
 				020AB4422350AF3D00ED6A6A /* NSPersistentContainerExtension.swift in Sources */,
 				020AB43F2350AF1800ED6A6A /* CoreDataTests.swift in Sources */,

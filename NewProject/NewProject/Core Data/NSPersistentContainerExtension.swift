@@ -3,7 +3,6 @@
 // Created by Jerome Hsieh.
 
 import CoreData
-import HouLogger
 
 extension NSPersistentContainer {
   func saveContext(backgroundContext: NSManagedObjectContext? = nil) throws {

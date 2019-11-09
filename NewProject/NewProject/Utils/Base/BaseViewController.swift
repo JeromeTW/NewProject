@@ -2,7 +2,6 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
-import HouLogger
 import UIKit
 
 class BaseViewController: UIViewController {
@@ -14,6 +13,9 @@ class BaseViewController: UIViewController {
 
   override func loadView() {
     logC("\(className) loadView")
+    let vc = UIViewController()
+    print(vc.className) // UIViewController
+    print(UIViewController.className) // UIViewController
     super.loadView()
   }
 

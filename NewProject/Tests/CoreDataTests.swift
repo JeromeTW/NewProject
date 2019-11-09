@@ -4,7 +4,6 @@
 
 import CoreData
 import XCTest
-import HouLogger
 
 class CoreDataTests: XCTestCase {
   lazy var coreDataConnect = CoreDataConnect(container: mockPersistantContainer)

@@ -3,7 +3,6 @@
 // Created by Jerome Hsieh.
 
 import Foundation
-import HouLogger
 
 class NetworkRequestOperation: AsynchronousOperation {
   typealias APIClientCompletionHandler = (Result<APIResponse<Data?>, APIError>) -> Void

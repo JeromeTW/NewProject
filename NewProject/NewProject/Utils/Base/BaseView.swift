@@ -2,7 +2,6 @@
 // Copyright (c) 2019 Jerome Hsieh. All rights reserved.
 // Created by Jerome Hsieh.
 
-import HouLogger
 import UIKit
 
 class BaseView: UIView {

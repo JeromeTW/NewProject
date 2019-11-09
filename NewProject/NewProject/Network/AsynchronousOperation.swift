@@ -3,7 +3,6 @@
 // Created by Jerome Hsieh.
 
 import Foundation
-import HouLogger
 
 /// Asynchronous Operation base class
 ///
