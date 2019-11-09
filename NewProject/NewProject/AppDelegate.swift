@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return true
     #else
       logC("🌘 NOT TEST")
-      setupWindow(rootViewController: MainTabBarController())
+      setupWindow(rootViewController: UIViewController())
+//      setupWindow(rootViewController: ExampleTabBarController())
       setupLogTextView()
       return true
     #endif

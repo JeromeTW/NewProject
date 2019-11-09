@@ -1,7 +1,8 @@
 PODS:
   - DeviceGuru (6.0.0)
-  - HouLogger (1.0.1):
+  - HouJia (0.0.1):
     - DeviceGuru
+    - SwiftyUtils
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
@@ -12,13 +13,12 @@ PODS:
   - SwiftyUtils (4.0.0)
 
 DEPENDENCIES:
-  - HouLogger
+  - HouJia
   - R.swift
   - ReachabilitySwift
   - SnapKit (~> 4.0)
   - SwiftFormat/CLI
   - SwiftLint
-  - SwiftyUtils
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -30,12 +30,12 @@ SPEC REPOS:
     - SwiftLint
   trunk:
     - DeviceGuru
-    - HouLogger
+    - HouJia
     - SwiftyUtils
 
 SPEC CHECKSUMS:
   DeviceGuru: af478ea9bff7614d85198b7516ea7657153c65bb
-  HouLogger: 5f344d33e05013872bb2d95fd69c26ffe052edb8
+  HouJia: b5878f670291f3003945fce807264496d6489e62
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
@@ -44,6 +44,6 @@ SPEC CHECKSUMS:
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: a5d140b35e87db3adefe8d9b679b4ef302a1d5d8
+PODFILE CHECKSUM: 8fb9e0c903f0269dc9caccfb8dcc586ee8825dea
 
 COCOAPODS: 1.8.4

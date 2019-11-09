@@ -9,8 +9,7 @@ target 'NewProject' do
   pod 'ReachabilitySwift'
   pod 'SwiftFormat/CLI'
   pod 'SnapKit', '~> 4.0'
-  pod 'HouLogger'
-  pod 'SwiftyUtils'
+  pod 'HouJia'
   target 'Tests' do
     inherit! :search_paths
   end
