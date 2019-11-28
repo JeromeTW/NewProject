@@ -1,9 +1,5 @@
-//
-//  exporteImport.swift
-//  NewProject
-//
-//  Created by JEROME on 2019/11/8.
-//  Copyright © 2019 jerome. All rights reserved.
-//
+// exporteImport.swift
+// Copyright (c) 2019 Jerome Hsieh. All rights reserved.
+// Created by Jerome Hsieh.
 
 @_exported import HouJia

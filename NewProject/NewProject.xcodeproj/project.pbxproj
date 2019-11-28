@@ -176,6 +176,7 @@
 			buildPhases = (
 				880264DA6434E666C3A6A445 /* [CP] Check Pods Manifest.lock */,
 				026447562327CFF900822485 /* R.swift Run Script */,
+				027F93E1238FAF46002B792D /* Swift Format */,
 				0264473D2327CF6200822485 /* Sources */,
 				0264473E2327CF6200822485 /* Frameworks */,
 				0264473F2327CF6200822485 /* Resources */,
@@ -291,6 +292,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		027F93E1238FAF46002B792D /* Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/NewProject/\"\n";
 		};
 		02BEA2072331E42A00C3E317 /* SwiftFormat Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
