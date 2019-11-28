@@ -12,6 +12,9 @@
     ![修改選中目錄名稱](./修改選中目錄名稱.png)
 1. 需要 delete 根目錄的 .git file, 在加入 Source Tree
 1. 如果 Test Target 的 Run 失敗，則到 Test Target 修改開發團隊。
+1. 在 Build Phases 中的 Swift Format 的 **NewProject** 換成你的目錄 
+
+    ![Swift Format Folder Rename](./Swift_Format_Folder_Rename.png)
         
 #### New Project 做了什麼呢？
 1. Add git, gitignore
