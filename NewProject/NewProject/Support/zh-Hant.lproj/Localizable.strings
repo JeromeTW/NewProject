@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  groupsync
+
+  Created by JEROME on 2017/10/5.
+  Copyright © 2017年 JEROME. All rights reserved.
+*/
+
+"common_cancel" = "取消";
+"common_ok" = "確定";
+"common_done" = "完成";
+"common_start" = "開始";
+"common_send" = "送出";
+"common_login1" = "登入";
+"common_email" = "電子郵件";
+"common_password" = "密碼";
+"common_or" = "或是";
+"common_confirm" = "確認";
+"common_error" = "錯誤";
+"common_save" = "儲存";
+"common_agree" = "同意";
+"common_logout" = "登出";
+
+"common_phone" = "手機";
+"common_address" = "地址";
+"common_city" = "縣市";
+"common_dist" = "區";
+
+"member_terms" = "會員條款";
+"I_have_had_account" = "我有帳號登入";
