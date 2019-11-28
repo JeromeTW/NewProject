@@ -54,7 +54,9 @@
 1. TestTarget, FirstTest.swift。已經設定好 Test Target 的 Other Swift Flag, 在 Test Target 也可以 Run #if DEBUG 的程式。 
 1. 使用 Storyboarded 要記得在 .storyboard 設定 Storyboard ID
 1. swiftformat
-    * cd iOS Project 下，到用 “swiftformat --inferoptions . --output .swiftformat” 產生一個 .swiftformat 配置檔案（個人喜歡把 indent set 2），再下 “swiftformat .” 指令調整格式。
+    * 改用 SwiftFormat Build Phase， 每次 Build 的時候都會調整格式。
+    
+    * ~~cd iOS Project 下，到用 “swiftformat --inferoptions . --output .swiftformat” 產生一個 .swiftformat 配置檔案（個人喜歡把 indent set 2），再下 “swiftformat .” 指令調整格式。~~
 
 ##### TODO
 1. Firebase Crashly
