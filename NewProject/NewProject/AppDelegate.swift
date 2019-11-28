@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
     logC("NSHomeDirectory:\(NSHomeDirectory())")
-    persistentContainerManager.setupCoreDataDB()
     #if TEST
       logC("🌘 TEST")
       setupWindow(rootViewController: UIViewController())
@@ -48,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     do {
       try persistentContainerManager.persistentContainer.saveContext()
     } catch {
-      logE("", error: error)
+      logF(error)
     }
   }
 }
