@@ -15,6 +15,7 @@
 		0264474C2327CF6300822485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0264474B2327CF6300822485 /* Assets.xcassets */; };
 		0264474F2327CF6300822485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0264474D2327CF6300822485 /* LaunchScreen.storyboard */; };
 		026A4E38235702D400993CD9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A4E37235702D400993CD9 /* R.generated.swift */; };
+		027F93DF238FA4D0002B792D /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F93DE238FA4D0002B792D /* FirstTest.swift */; };
 		02D5ED612374FC030061DE26 /* exporteImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ED602374FC030061DE26 /* exporteImport.swift */; };
 		8AE4D2886450314D4B688D9C /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B933639B5ADB1E075213BBFA /* Pods_Tests.framework */; };
 		9BFA9D32793D30310FAC46AD /* Pods_NewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD90FB7DF2E36860D14198 /* Pods_NewProject.framework */; };
@@ -41,6 +42,8 @@
 		0264474E2327CF6300822485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		026447502327CF6300822485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		026A4E37235702D400993CD9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		027F93DD238FA4CF002B792D /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		027F93DE238FA4D0002B792D /* FirstTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTest.swift; sourceTree = "<group>"; };
 		02BEA1F62331DA4200C3E317 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BEA1FA2331DA4200C3E317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D5ED602374FC030061DE26 /* exporteImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exporteImport.swift; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				02BEA1FA2331DA4200C3E317 /* Info.plist */,
+				027F93DE238FA4D0002B792D /* FirstTest.swift */,
+				027F93DD238FA4CF002B792D /* Tests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 					};
 					02BEA1F52331DA4200C3E317 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1110;
 						TestTargetID = 026447402327CF6200822485;
 					};
 				};
@@ -382,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027F93DF238FA4D0002B792D /* FirstTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +493,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -505,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DTEST";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.NewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -520,6 +528,7 @@
 			baseConfigurationReference = 9669C43079E7D17EDB59639F /* Pods-Tests.test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -531,6 +540,8 @@
 				OTHER_SWIFT_FLAGS = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProject.app/NewProject";
@@ -592,6 +603,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -700,6 +712,7 @@
 			baseConfigurationReference = 703948F048191ABF80999FE9 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -708,9 +721,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "-DTEST";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProject.app/NewProject";
@@ -722,6 +737,7 @@
 			baseConfigurationReference = D3CDD08B8AB2F431ED004CB8 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -730,9 +746,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "-DTEST";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewProject.app/NewProject";
