@@ -9,7 +9,7 @@ target 'NewProject' do
   pod 'ReachabilitySwift'
   pod 'SwiftFormat/CLI'
   pod 'SnapKit', '~> 4.0'
-  pod 'HouJia'
+  pod 'HouJia', :git => 'https://github.com/JeromeTW/HouJia.git', :commit => '0086d20'
   target 'Tests' do
     inherit! :search_paths
   end
