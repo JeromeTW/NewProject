@@ -16,10 +16,31 @@
 #### New Project 做了什麼呢？
 1. Add git, gitignore
 1. pod init
-1.  * pod 'R.swift'
+    * pod 'R.swift'
     * pod 'SwiftLint'
     * pod 'DeviceGuru'
     * pod 'ReachabilitySwift'
+    * pod 'SwiftFormat/CLI'
+    * pod 'SnapKit', '~> 4.0'
+    * pod 'HouJia', :git => 'https://github.com/JeromeTW/HouJia.git', :commit => '0086d20'
+
+    **HouJia 中有許多我常用的套件包括 Log, Network, CoreData, ImageLoader, Cooedinator 以及許多工具程式，可以點擊上述連結進去看看**
+    ```
+    post_install do |installer|
+        installer.pods_project.targets.each do |target|
+            #puts "##### target: #{target} #####"
+            target.build_configurations.each do |config|
+                #puts "##### config: #{config} #####"
+                if config.name == 'Test'
+                config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-DDEBUG', '-DTEST']
+                else
+                config.build_settings['OTHER_SWIFT_FLAGS'] = '-DDEBUG'
+                end
+            end
+        end
+    end
+    ```
+
 1. Add swiftlint.yml
 1. Add Build Phases **Before Compile Sources**
     
@@ -30,16 +51,10 @@
         Add **$TEMP_DIR/rswift-lastrun** to the "Input Files" and **$SRCROOT/R.generated.swift** to the "Output Files" of the Build Phase
         
     * "${PODS_ROOT}/SwiftLint/swiftlint"   
-1. Add Log files
-1. Add Network files
-1. Core Data files
-1. Utils files
-1. TestTarget
-    * TestsTarget -> Build Settings -> Other Swift Flag 要加 “-DTEST”
+1. TestTarget, FirstTest.swift。已經設定好 Test Target 的 Other Swift Flag, 在 Test Target 也可以 Run #if DEBUG 的程式。 
 1. 使用 Storyboarded 要記得在 .storyboard 設定 Storyboard ID
 1. swiftformat
     * cd iOS Project 下，到用 “swiftformat --inferoptions . --output .swiftformat” 產生一個 .swiftformat 配置檔案（個人喜歡把 indent set 2），再下 “swiftformat .” 指令調整格式。
-1. Cooedinator
 
 ##### TODO
 1. Firebase Crashly
