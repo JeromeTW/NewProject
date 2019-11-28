@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import HouJia
 
 class FirstTest: XCTestCase {
 
