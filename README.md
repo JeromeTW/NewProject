@@ -15,6 +15,7 @@
 1. 在 Build Phases 中的 Swift Format 的 **NewProject** 換成你的目錄 
 
     ![Swift Format Folder Rename](./Swift_Format_Folder_Rename.png)
+1. 多國語翻譯參考檔案 https://docs.google.com/spreadsheets/d/1d4M9ig7s_Za5wZnZ2CzssT-1oJjHUmkHTWd_4O-bcCc/edit#gid=271138619
         
 #### New Project 做了什麼呢？
 1. Add git, gitignore
