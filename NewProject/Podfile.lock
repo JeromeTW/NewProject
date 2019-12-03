@@ -8,7 +8,6 @@ PODS:
   - R.swift.Library (5.0.1)
   - ReachabilitySwift (4.3.1)
   - SnapKit (4.2.0)
-  - SwiftFormat/CLI (0.40.11)
   - SwiftLint (0.34.0)
   - SwiftyUtils (4.0.0)
 
@@ -17,7 +16,6 @@ DEPENDENCIES:
   - R.swift
   - ReachabilitySwift
   - SnapKit (~> 4.0)
-  - SwiftFormat/CLI
   - SwiftLint
 
 SPEC REPOS:
@@ -26,7 +24,6 @@ SPEC REPOS:
     - R.swift.Library
     - ReachabilitySwift
     - SnapKit
-    - SwiftFormat
     - SwiftLint
   trunk:
     - DeviceGuru
@@ -49,10 +46,9 @@ SPEC CHECKSUMS:
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftFormat: 304f39cab266d39c9d60f4fceec37ed6f43b931c
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 3b98df13d867c145a5e4e38938d2f9088f422e69
+PODFILE CHECKSUM: 53cc06e567484521b78f46bc65c5773a01f58336
 
 COCOAPODS: 1.8.4
