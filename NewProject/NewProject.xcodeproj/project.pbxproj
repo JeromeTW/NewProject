@@ -14,8 +14,8 @@
 		0264474C2327CF6300822485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0264474B2327CF6300822485 /* Assets.xcassets */; };
 		0264474F2327CF6300822485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0264474D2327CF6300822485 /* LaunchScreen.storyboard */; };
 		026A4E38235702D400993CD9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A4E37235702D400993CD9 /* R.generated.swift */; };
+		027C83EE239618130028C107 /* exporteImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ED602374FC030061DE26 /* exporteImport.swift */; };
 		027F93DF238FA4D0002B792D /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F93DE238FA4D0002B792D /* FirstTest.swift */; };
-		027F93E0238FAD83002B792D /* exporteImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ED602374FC030061DE26 /* exporteImport.swift */; };
 		02D5ED612374FC030061DE26 /* exporteImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ED602374FC030061DE26 /* exporteImport.swift */; };
 		8AE4D2886450314D4B688D9C /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B933639B5ADB1E075213BBFA /* Pods_Tests.framework */; };
 		9BFA9D32793D30310FAC46AD /* Pods_NewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD90FB7DF2E36860D14198 /* Pods_NewProject.framework */; };
@@ -106,7 +106,6 @@
 				026447582327D06500822485 /* Support */,
 				026447442327CF6200822485 /* AppDelegate.swift */,
 				026447462327CF6200822485 /* ViewController.swift */,
-				02D5ED602374FC030061DE26 /* exporteImport.swift */,
 			);
 			path = NewProject;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 		026447582327D06500822485 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				02D5ED602374FC030061DE26 /* exporteImport.swift */,
 				0239358E2359607A009E08E3 /* InfoPlist.strings */,
 				0239359123596089009E08E3 /* Localizable.strings */,
 				026A4E37235702D400993CD9 /* R.generated.swift */,
@@ -367,7 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				027F93E0238FAD83002B792D /* exporteImport.swift in Sources */,
+				027C83EE239618130028C107 /* exporteImport.swift in Sources */,
 				027F93DF238FA4D0002B792D /* FirstTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.NewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
